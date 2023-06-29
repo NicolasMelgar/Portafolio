@@ -1607,6 +1607,8 @@ y lo aplico en icon y categoría*/
     position: absolute;
     max-width: 300px;
     top: 0;
+    /*esto lo uso para reparar la posición del aside
+    pero un día no tiene espacio y otro día sí y no se por qué*/
     right: -30px;
     bottom: 0;
     border-radius: 0;

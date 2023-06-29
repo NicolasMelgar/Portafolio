@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- CARACTER Y ESCALA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- DESCRIPPCIÓN Y KEY WORDS -->
+    <meta name="description" content="Sitio de Nicolás Melgar dedicado al diseño y desarrollo web como Front End">
+    <meta name="keywwords"
+        content="FONTEND, FRONT END, DISEÑO WEB, DESARROLLO WEB, HTML, CSS, JAVASCRIPT, JAVA, SASS, BOOTSTRAP, GIT">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/img/LogoNMcuadrado.png" type="image/x-icon">
+
+    <!-- FONTAWERSOME directo asseets -->
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <!-- Hoja estilos CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+
+    <!-- Font-family:  Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+    </style>
+
+    <!-- Mi JS para menú -->
+    <script src="../js/menu.js" defer> </script>
+
+
+    <!-- TITULO -->
+    <title>N/M Desarrollo Web</title>
+
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- Barra lateral (info usuario) -->
+        <aside class="layout__aside">
+
+            <section class="aside__user-info">
+
+                <!-- Información general de usuario -->
+                <div class="user-info__general">
+                    <div class="user-info__container-imagen">
+                        <img class="user-info__imagen" src="../img/LentesSF.png" alt="Nicolas Melgar desarrollador web">
+                    </div>
+
+                    <h2 class="user-info__nombre">Nicolás Melgar</h2>
+                    <h4 class="user-info__trabajo">Desarrollador Web</h4>
+                </div>
+
+                <!-- Menú de navegación -->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="../../index.html">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Inicio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="sobreMi.html">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">Sobre Mi</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="estudios.html">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Estudios</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="portafolio.html" id="bloqueo-portafolio">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="blog.html">
+                                <i class="menu__icon fa-solid fa-book"></i>
+                                <span class="menu__overlay">Recursos</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="contacto.html">
+                                <i class="menu__icon fa-solid fa-envelope"></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!--  Iconos de redes sociales-->
+                <div class="user-info__links">
+                    <ul class="links__social">
+                        <li class="social_option">
+                            <a href="https://www.youtube.com/channel/UCL3P7mSnAlcI4cWkn4Hp_7Q" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-Y fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://www.linkedin.com/in/nicol%C3%A1s-melgar-6b9960270/" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-L fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://github.com/NicolasMelgar" class="social__link" target="_blank">
+                                <i class="social__icon-G fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Botón de descargar currículum-->
+                <div class="user-info__buttons">
+                    <a href="#" class="user-info__btn">Descargar CV</a>
+                </div>
+
+                <!-- Footer -->
+                <footer class="user-info__footer">
+                    &copy; 2023 Nicolás Melgar Deesarrollo Web
+
+                </footer>
+            </section>
+        </aside>
+
+        <!-- Menu responsive -->
+        <div class="layout__menu-toggle">
+            <i class="menu-toggle__icon fa-solid fa-bars"></i>
+            <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+        </div>
+        <!-- Contenido principal -->
+        <main class="layout__content">
+            <section class="content__page content__portafolio">
+                <!-- ESTE CONTENIDO ES LO QUE CAMBIA ENTRE LAS PÁGINAS -->
+                <header class="portafolio__header">
+                    <h1 class="portafolio__title">
+                        Portafolio
+                    </h1>
+                </header>
+
+                <nav class="portafolio__navbar">
+                    <ul class="portafolio__menu">
+                        <li class="portafolio__opciones portafolio__opciones--activo">
+                            <a href="https://github.com/NicolasMelgar?tab=repositories" target="_blank"
+                                class="portafolio__link">Git</a>
+                        </li>
+                        <li class="portafolio__opciones portafolio__opciones--activo">
+                            <a href="https://nicolasmelgar.github.io/WebConHTMLyCSS/index.html" target="_blank"
+                                class="portafolio__link">HTML y CSS</a>
+                        </li>
+                        <li class="portafolio__opciones portafolio__opciones--activo">
+                            <a href="https://nicolasmelgar.github.io/Proyecto-Final/" class="portafolio__link"
+                                target="_blank">Bootstrap y SASS</a>
+                        </li>
+                        <li class="portafolio__opciones portafolio__opciones--activo">
+                            <a href="https://github.com/NicolasMelgar/JavaScript" class="portafolio__link"
+                                target="_blank">Java</a>
+                        </li>
+                        <li class="portafolio__opciones portafolio__opciones--activo">
+                            <a href="https://nicolasmelgar.github.io/WebBootstrap-2/" class="portafolio__link"
+                                target="_blank">Otros</a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <section class="portafolio__galeria">
+                    <!-- WEB 1 -->
+                    <div class="galeria__item">
+                        <div class="galeria__container--img">
+                            <a href="https://nicolasmelgar.github.io/WebConHTMLyCSS/index.html" class="galeria__link"
+                                target="_blank">
+                                <img class="galeria__img" src="../img/Web1.png" alt="Mi primer sitio web">
+                            </a>
+                        </div>
+                        <div class="galeria__titulo">Primer sitio creado y sobre el cual se basa el actual.
+                        </div>
+                        <i class="galeria__icon fa-brands fa-html5"><i
+                                class="galeria__icon fa-brands fa-css3-alt"></i></i>
+                        <span class="galeria__categoria">HTML y CSS</span>
+
+                    </div>
+                    <!-- WEB 2 -->
+                    <div class="galeria__item">
+                        <div class="galeria__container--img">
+                            <a href="https://nicolasmelgar.github.io/WebBootstrap-2/" class="galeria__link"
+                                target="_blank">
+                                <img class="galeria__img" src="../img/Web3.png" alt="Mi primer sitio web">
+                            </a>
+                        </div>
+                        <div class="galeria__titulo">Sitio de cervecería </div>
+                        <i class="galeria__icon fa-brands fa-sass"><i
+                                class="galeria__icon fa-brands fa-bootstrap"></i></i>
+                        <span class="galeria__categoria">Experimental</span>
+
+                    </div>
+                    <!-- WEB 3 -->
+                    <div class="galeria__item">
+                        <div class="galeria__container--img">
+                            <a href="https://nicolasmelgar.github.io/WebBootstrap-1/" class="galeria__link"
+                                target="_blank">
+                                <img class="galeria__img" src="../img/Web2.png" alt="Mi primer sitio web">
+                            </a>
+                        </div>
+                        <div class="galeria__titulo">Sitio usando Bootstrap</div>
+                        <i class="galeria__icon fa-brands fa-bootstrap"> <i
+                                class="galeria__icon fa-brands fa-sass"></i></i>
+                        <span class="galeria__categoria">Aprendizaje</span>
+
+                    </div>
+                    <!-- WEB 4 -->
+                    <div class="galeria__item">
+                        <div class="galeria__container--img">
+                            <a href="https://nicolasmelgar.github.io/Proyecto-Final/" class="galeria__link"
+                                target="_blank">
+                                <img class="galeria__img" src="../img/Web4.png" alt="Mi primer sitio web">
+                            </a>
+                        </div>
+                        <div class="galeria__titulo">Landing Page usando Bootstrap - HTML 5 - CSS - SASS
+                        </div>
+
+
+                        <i class="galeria__icon fa-brands fa-bootstrap"> <i
+                                class="galeria__icon fa-brands fa-css3-alt"><i
+                                    class="galeria__icon fa-brands fa-sass"></i></i></i>
+
+                        <span class="galeria__categoria">Formación</span>
+
+                    </div>
+                </section>
+
+
+
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

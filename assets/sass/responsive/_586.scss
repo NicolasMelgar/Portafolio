@@ -1,0 +1,75 @@
+
+/* ----   586   ----   */
+@media (max-width: 586px) {
+
+
+    .content__page {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /*Parte de información extra en sobre mi*/
+    .extra__container,
+    .resume__container {
+        @include columna2;
+        text-align: center;
+    }
+
+    .extra__info {
+        margin: 2rem;
+    }
+
+
+    .about__servicios {
+        flex-basis: 100%;
+    }
+
+    .resume__left,
+    .resume__right,
+    .reviews__review,
+    .servicios__servicio {
+        margin: 1rem 1rem;
+    }
+
+    .content__resume {
+        text-align: center;
+    }
+
+    .resume__header {
+        margin-top: 2rem;
+    }
+
+    .resume__right {
+        justify-content: center;
+    }
+
+    .contacto__container{
+        @include columna2;
+
+    }
+
+    .contacto__info, 
+    .contacto__form-box{
+        margin: 0 5rem;
+    }
+
+    .content__contacto{
+        text-align: center;
+    }
+
+    .form__container{
+        @include columna2;
+    }
+
+    .form__left{
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+    .form__right{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+}

@@ -1,0 +1,22 @@
+/*ESTO ES PARA NO PODER HACER CLICK EN LA PÁGINA QUE ESTOY*/
+#bloqueo-sobreMi:hover .menu__icon,
+#bloqueo-contacto:hover .menu__icon,
+#bloqueo-blog:hover .menu__icon,
+#bloqueo-estudios:hover .menu__icon,
+#bloqueo-portafolio:hover .menu__icon,
+#bloqueo-inicio:hover .menu__icon {
+    opacity: 0.7;
+    pointer-events: none;
+    color: $color-s2;
+}
+
+/*Esto cambia el color del ícono en la página activa*/
+#bloqueo-sobreMi .fa-solid,
+#bloqueo-inicio .fa-solid,
+#bloqueo-contacto .fa-solid,
+#bloqueo-blog .fa-solid,
+#bloqueo-estudios .fa-solid,
+#bloqueo-portafolio .fa-solid {
+    color: rgb(44, 159, 125);
+    opacity: .9;
+}

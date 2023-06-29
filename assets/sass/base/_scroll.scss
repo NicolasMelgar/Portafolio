@@ -1,0 +1,76 @@
+
+/*---   SCROLL PARA MOZ   ---*/
+/* este se complica porque moz no tiene como webkit*/
+.content__page{
+    scrollbar-width:auto;
+    scrollbar-color: $color-scroll transparent;
+}
+
+/*---   SCROLL PARA CHROME   ---*/
+/*ancho de la barra y color de fondo*/
+.content__page::-webkit-scrollbar{
+    width: 30px;
+    background: transparent;
+}
+
+/*el borde de caja al rededor de lo anterior*/
+.content__page::-webkit-scrollbar-thumb{
+    border: 10px solid transparent;
+    box-shadow: none;
+    border-radius: 4rem;
+}
+
+/*esta es la barra que se desplaza en la página*/
+.content__page:hover::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 0 10px  $color-scrollbar;
+}
+
+.content__page:hover::-webkit-scrollbar-thumb:hover{
+    border: 8px solid transparent;
+    box-shadow: inset 0 0 0 10px  $color-scroll;
+}
+
+/*esta es la caja que contiene todo el scroll*/
+.content__page::-webkit-scrollbar-track{
+    background-color:transparent;
+    margin: 4rem 0rem;
+}
+
+
+
+/*---   SCROLL PARA CHROME   ---*/
+/*LAYOUT ASIDE*/
+/*ancho de la barra y color de fondo*/
+.layout__aside::-webkit-scrollbar{
+    width: 30px;
+    background: var(--color-s);/*uso este color para que quede integrado e invisible en el layout*/
+}
+
+/*el borde de caja al rededor de lo anterior*/
+.layout__aside::-webkit-scrollbar-thumb{
+    border: 10px solid transparent;
+    box-shadow: none;
+    border-radius: 4rem;
+}
+
+/*esta es la barra que se desplaza en la página*/
+.layout__aside:hover::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 0 10px  $color-principal;
+}
+
+.layout__aside:hover::-webkit-scrollbar-thumb:hover{
+    border: 8px solid transparent;
+    box-shadow: inset 0 0 0 10px  $color-principal;
+}
+
+/*esta es la caja que contiene todo el scroll*/
+.layout__aside::-webkit-scrollbar-track{
+    background-color:transparent;
+    margin: 2rem 0rem;
+}
+
+/*LAYOUT PARA MOZILLA*/
+.layout__aside{
+    scrollbar-width:auto;
+    scrollbar-color: $color-s $color-principal;
+}

@@ -1,0 +1,40 @@
+.recursosB__header{
+    @include fila;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.recursos__articulo{
+    flex-basis: 100%;
+    justify-content: center;
+    border-bottom: 3px solid $color-s2;
+    margin: 0 2rem;
+}
+
+.articulo__box1{
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.articulo__detalle{
+    font-size: 1.5rem;
+}
+
+.articulo__box2{
+    margin: 1rem 0;
+}
+.artículo__btn{
+    text-align: center;
+    color: $color-verde;
+    max-width: 20rem;
+    margin: 0 auto;
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 2px solid $color-grey;
+
+        &:hover{
+            color: $color-principal;
+            background-color: $color-s;
+        }
+}

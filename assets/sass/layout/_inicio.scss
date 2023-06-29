@@ -1,0 +1,245 @@
+/*ESTRUCTURA PRINCIPAL*/
+
+
+.layout {
+    position: relative;
+    min-width: 1290px;
+    width: 75%;
+    height: 80vh;
+    /*como el valor es igual la altura es fija, así que en body va 100%*/
+    min-height: 80vh;
+    margin: 10vh auto;
+    /*esto centra la caja principal*/
+
+    /*Luego deberé vincular las áreas*/
+    display: grid;
+    grid-template-areas: "aside content";
+    grid-template-columns: 30% 70%;
+
+    /*sombra detras de layout*/
+    border-radius: 4rem;
+    box-shadow: 0 0 50px -5px rgba(0, 0, 0, .65);
+
+}
+
+/*BARRA LATERAL AZUL (ASIDE)*/
+
+.layout__aside {
+    z-index: 1;
+    grid-area: aside;
+    /*vinculo el área aside*/
+    border-radius: 4rem 0 0 4rem;
+    /* esto overflow está pensado en lo responsive */
+    overflow: auto;
+    /*me coloca una barra de scroll si es necesaria*/
+    overflow-x: hidden;
+    /*me oculta lo que sobre de ancho, eje x*/
+
+}
+
+/*Caja con foto e información*/
+.aside__user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100%;
+    min-width: 30rem;
+    background-color: $color-s;
+    color: $color-principal;
+}
+
+/*Caja de mi imágen*/
+.user-info__container-imagen {
+    position: relative;
+    display: inline-block;
+    margin-top: 7rem;
+    width: 20rem;
+    background-color: $color-s;
+    /*esto es por si no se carga la img*/
+    border: 3px solid $color-s2;
+
+    border-radius: 30rem;
+    overflow: hidden;
+
+}
+
+.user-info__imagen {
+    margin-left: 2rem;
+    width: 100%;
+    filter: drop-shadow(0px 0px 15px  $color-principal);
+}
+
+.user-info__nombre {
+    margin-top: 2.6rem;
+    color: $color-principal;
+    font-size: 3rem;
+}
+
+.user-info__trabajo {
+    color: $color-principal;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.user-info__links {
+    margin-bottom: 2rem;
+}
+
+.links__social {
+    @include fila;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.social_option {
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    opacity: .7;
+    border-radius: 2rem;
+    transition: all 500ms linear;
+}
+
+.social_option:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.social__icon-Y:hover {
+    color: red;
+}
+
+.social__icon-L:hover {
+    color: rgb(8, 66, 137);
+}
+
+.social__icon-G:hover {
+    color: rgb(2, 0, 0);
+}
+
+.user-info__buttons {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.user-info__btn {
+    border: 2px solid $color-principal;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    color: $color-principal;
+    /*SOMBRA: desplazamiento vertical, despl horiz, difuminado, ancho imagen, color y opaciodad*/
+    box-shadow: 5px 8px 5px 1px rgba(0, 0, 0, .3);
+    transition: all 500ms ease-in-out;
+}
+
+.user-info__btn:hover {
+    background-color: $color-principal;
+    color: $color-secondary;
+}
+
+.user-info__footer {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1rem;
+}
+
+
+/*CONTENIDO PRINCIPAL (CONTENT)*/
+
+.layout__content {
+    grid-area: content;
+    /*vinculo el área content*/
+    height: 100%;
+    min-height: 100%;
+    background-color: $color-s;
+    /*sup izq - sup dere - abajo der - abajo izq*/
+    border-radius: 0 10rem 10rem 0;
+}
+
+.content__page {
+    background-color: $color-principal;
+    min-height: 100%;
+    border-radius: 4rem;
+
+    @include columna;
+    align-items: center;
+
+}
+
+.page__name {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.page__job {
+    font-size: 3rem;
+    font-weight: lighter;
+    color: $color-subtitulo;
+}
+
+
+/*MENU DE NAVEGACIÓN FIJA LATERAL*/
+
+.layout__menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -12.5rem;
+    min-width: 11rem;
+    border-color: $color-transparent;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 60%;
+    min-height: 32rem;
+    padding: 2rem 0;
+    background-color: $color-principal;
+    box-shadow: 0 0 3rem -1rem rgba(246, 241, 241, 0.8);
+    border-radius: 2.5rem;
+}
+
+.menu__option {
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: all 500ms ease-out;
+}
+
+.menu__option:hover .menu__icon {
+    color: $color-s2;
+}
+
+.menu__icon {
+    color: $color-grey;
+    font-size: 2.5rem;
+    transition: all 500ms ease-out;
+}
+
+.menu__overlay {
+    position: absolute;
+    right: 0;
+    margin-top: -3rem;
+    opacity: 0;
+    display: block;
+    color: $color-principal;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background-color: $color-s2;
+    font-size: 2rem;
+    /*esto lo uso para que no arme dos filas en "sobre mi"*/
+    white-space: nowrap;
+    transition: all 500ms ease-in;
+}
+
+.menu__option:hover .menu__overlay {
+    opacity: 1;
+    right: 80%;
+}

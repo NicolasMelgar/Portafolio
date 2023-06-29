@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- CARACTER Y ESCALA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- DESCRIPPCIÓN Y KEY WORDS -->
+    <meta name="description" content="Sitio de Nicolás Melgar dedicado al diseño y desarrollo web como Front End">
+    <meta name="keywwords"
+        content="FONTEND, FRONT END, DISEÑO WEB, DESARROLLO WEB, HTML, CSS, JAVASCRIPT, JAVA, SASS, BOOTSTRAP, GIT">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/img/LogoNMcuadrado.png" type="image/x-icon">
+
+    <!-- FONTAWERSOME directo asseets -->
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <!-- Hoja estilos CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+
+
+    <!-- Font-family:  Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+    </style>
+
+    <!-- Mi JS para menú -->
+    <script src="../js/menu.js" defer> </script>
+
+
+    <!-- TITULO -->
+    <title>N/M Desarrollo Web</title>
+
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- Barra lateral (info usuario) -->
+        <aside class="layout__aside">
+
+            <section class="aside__user-info">
+
+                <!-- Información general de usuario -->
+                <div class="user-info__general">
+                    <div class="user-info__container-imagen">
+                        <img class="user-info__imagen" src="../img/LentesSF.png" alt="Nicolas Melgar desarrollador web">
+                    </div>
+
+                    <h2 class="user-info__nombre">Nicolás Melgar</h2>
+                    <h4 class="user-info__trabajo">Desarrollador Web</h4>
+                </div>
+
+                <!-- Menú de navegación -->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="../../index.html">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Inicio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="sobreMi.html" id="bloqueo-sobreMi">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">Sobre Mi</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="estudios.html">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Estudios</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="portafolio.html">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="blog.html">
+                                <i class="menu__icon fa-solid fa-book"></i>
+                                <span class="menu__overlay">Recursos</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="contacto.html">
+                                <i class="menu__icon fa-solid fa-envelope"></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!--  Iconos de redes sociales-->
+                <div class="user-info__links">
+                    <ul class="links__social">
+                        <li class="social_option">
+                            <a href="https://www.youtube.com/channel/UCL3P7mSnAlcI4cWkn4Hp_7Q" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-Y fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://www.linkedin.com/in/nicol%C3%A1s-melgar-6b9960270/" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-L fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://github.com/NicolasMelgar" class="social__link" target="_blank">
+                                <i class="social__icon-G fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Botón de descargar currículum-->
+                <div class="user-info__buttons">
+                    <a href="#" class="user-info__btn">Descargar CV</a>
+                </div>
+
+                <!-- Footer -->
+                <footer class="user-info__footer">
+                    &copy; 2023 Nicolás Melgar Deesarrollo Web
+
+                </footer>
+            </section>
+        </aside>
+
+        <!-- Menu responsive -->
+        <div class="layout__menu-toggle">
+            <i class="menu-toggle__icon fa-solid fa-bars"></i>
+            <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- Contenido principal -->
+        <main class="layout__content">
+            <section class="content__page content__about">
+                <!-- ESTE CONTENIDO ES LO QUE CAMBIA ENTRE LAS PÁGINAS -->
+                <header class="about__header">
+                    <h1 class="about__title">
+                        Sobre Mi...
+                    </h1>
+                </header>
+
+                <section class="about__personal-info">
+                    <div class="personal-info__bio">
+                        <p class="personal-info__description">
+                            He visto la internet desde las primeras conexiones por teléfono de línea. El avance que ha tenido me parece increíble y no he podido dejar que querer aprender cómo se ha logrado. Antes un arquitecto construía en el mundo real, ahora se lo puede hacer en el mundo virtual. Sin embargo, el vértigo de semejante transformación conlleva implícita la actualización permanente, y eso me encanta. 
+                            Hace varias décadas iniciar un sistema operativo con un disco de booteo era épico y Wikipedia impresionante. Ahora crear un sitio web es una realidad y el futuro es una posibilidad infinita. 
+
+                        </p>
+                    </div>
+
+                    <div class="personal-info__data">
+                        <ul class="personal-info__list">
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">Estudios:</span>
+                                <span class="personal-info__value">Universitarios</span>
+                            </li>
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">País:</span>
+                                <span class="personal-info__value">Uruguay/Argentina/España</span>
+                            </li>
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">Correo:</span>
+                                <span class="personal-info__value">nicolasmelgarparadizo@gmail.com</span>
+                            </li>
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">Teléfono:</span>
+                                <span class="personal-info__value">0054-9-2944-802755</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="about__servicios">
+                    <header class="servicios__header">
+                        <h2 class="servicios__titulo">
+                            Lo que hago y <span class="titulo__color">lo que haré</span>
+                        </h2>
+                    </header>
+                    <div class="servicios__container">
+                        <!-- servicio 1 -->
+                        <article class="servicios__servicio">
+                            <div class="servicio__icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="servicios__contenido">
+                                <h4 class="servicios__titulo">Programación</h4>
+                                <p class="servicio__descripcion">La programación es en sí misma una unidad. Aprender HTML 5, CSS 3, JavaScrip y JAVA ha sido solo el comienzo. <br>
+                                    Seguiré realizando cursos de introducción a la
+                                    programación, de matemáticas discretas en su uso tecnológico y cualquier otra tecnología que considere pertinente para mi proceso. </p>
+                            </div>
+                        </article>
+
+                        <!-- servicio 2 -->
+                        <article class="servicios__servicio">
+                            <div class="servicio__icon">
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                            </div>
+                            <div class="servicios__contenido">
+                                <h4 class="servicios__titulo">Formación</h4>
+                                <p class="servicio__descripcion">Confío mucho en mis capacidades autodidactas, pero no
+                                    creo que sea el único camino. Por ello, he decidido diversificar mi formación de
+                                    forma tal que evite los obstáculos clásicos de ser autodidacta. <br>
+                                    Por eso usaré Freecodecamp, Open bootcamp, Coderhouse, Proyecto odin y cursos gratis
+                                    o pagos de las plataformas educativas líderes.</p>
+                            </div>
+                        </article>
+
+
+                        <!-- servicio 3 -->
+                        <article class="servicios__servicio">
+                            <div class="servicio__icon">
+                                <i class="fa-solid fa-computer"></i>
+                            </div>
+                            <div class="servicios__contenido">
+                                <h4 class="servicios__titulo">Desarrollo web</h4>
+                                <p class="servicio__descripcion">El desarrollo web permite sentir cierta "satisfacción"
+                                    a partir de logros concretos, y esto es importante al comenzar. Ver en la vida real
+                                    lo que uno construye me resulta imprescindible, por eso el Frontend es el primer
+                                    momento en mi camino. Ya luego el Backend llegará inevitablemente.</p>
+                            </div>
+                        </article>
+
+                        <!-- servicio 4 -->
+                        <article class="servicios__servicio">
+                            <div class="servicio__icon">
+                                <i class="fa-solid fa-terminal"></i>
+                            </div>
+                            <div class="servicios__contenido">
+                                <h4 class="servicios__titulo">Revisión y mejora de código</h4>
+                                <p class="servicio__descripcion">He descubierto que revisar mis códigos y modificarlos,
+                                    así como ayudar a otros en la mejora de sus códigos, ha sido un camino de
+                                    aprendizaje muy valioso. En todo caso, uno aprende realmente lo que enseña...dicen.
+                                </p>
+                            </div>
+                        </article>
+
+
+                    </div>
+                </section>
+
+                <section class="about__reviews">
+                    <header class="reviews__header">
+                        <h2 class="reviews__title">Reseñas</h2>
+                    </header>
+                    <div class="reviews__container">
+                        <!-- review 1 -->
+                        <article class="reviews__review">
+                            <div class="review__image-container">
+                                <img class="review__image" src="../img/testimonio2.jpg" alt="testimonio1">
+                            </div>
+                            <div class="review__description">
+                                <p class="review__text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam assumenda iure
+                                    nemo corporis iste voluptates ad doloribus quasi illum recusandae possimus ex, amet
+                                    beatae eum, labore atque eveniet. Odio.
+                                </p>
+                            </div>
+                            <div class="review__autor">
+                                <div class="review__autor--info">
+                                    <h3 class="review__nombre">Nicolás Melgar</h3>
+                                    <h4 class="review__company">Developers S.A.</h4>
+                                </div>
+                                <div class="review__autor-icon">
+                                    <i class="review__icon fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Review 2 -->
+                        <article class="reviews__review">
+                            <div class="review__image-container">
+                                <img class="review__image" src="../img/testimonio1.jpg" alt="testimonio1">
+                            </div>
+                            <div class="review__description">
+                                <p class="review__text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae magnam assumenda iure
+                                    nemo corporis iste voluptates ad doloribus quasi illum recusandae possimus ex, amet
+                                    beatae eum, labore atque eveniet. Odio.
+                                </p>
+                            </div>
+                            <div class="review__autor">
+                                <div class="review__autor--info">
+                                    <h3 class="review__nombre">Mariela Davies</h3>
+                                    <h4 class="review__company">Profesional Independiente</h4>
+                                </div>
+                                <div class="review__autor-icon">
+                                    <i class="review__icon fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+
+                <section class="about__prices">
+                    <header class="prices__header">
+                        <h2 class="prices__title">Precios</h2>
+                    </header>
+
+                    <div class="prices__container">
+                        <!-- Tarifa normal -->
+                        <section class="prices__box">
+                            <div class="prices__subtitle">
+                                <h2 class="prices__text">Normal</h2>
+                            </div>
+                            <div class="prices__price">
+                                <span class="prices__number">Usd </span>
+                                <small class="prices__advice">A convenir</small>
+                            </div>
+                            <div class="prices__buy">
+                                <a class="prices__btn" href="#">Presupuesto gratis</a>
+                            </div>
+                            <div class="prices__reward">
+                                Creación de un sitio web
+                            </div>
+                            <div class="prices__reward">
+                                Personalización usando HTML - CSS - Bootstrap
+                            </div>
+                            <div class="prices__reward">
+                                Formato Landing Page
+                            </div>
+                        </section>
+                        <!-- Tarifa Premiun -->
+                        <section class="prices__box">
+                            <div class="prices__subtitle">
+                                <h2 class="prices__text">Premium</h2>
+                            </div>
+                            <div class="prices__price">
+                                <span class="prices__number">Usd</span>
+                                <small class="prices__advice">A convenir</small>
+                            </div>
+                            <div class="prices__buy">
+                                <a class="prices__btn" href="#">Presupuesto gratis</a>
+                            </div>
+                            <div class="prices__reward">
+                                Creación de un sitio web
+                            </div>
+                            <div class="prices__reward">
+                                Personalización usando HTML - CSS - JavaScrip - Animaciones - SEO
+                            </div>
+                            <div class="prices__reward">
+                                Formato multi-páginas
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="about__extra">
+                    <header class="extra__header">
+                        <h2 class="extra__title">Información Extra</h2>
+                    </header>
+                    <div class="extra__container">
+                        <!-- extra info 1 -->
+                        <article class="extra__info">
+                            <i class="extra__icon fa-solid fa-heart"></i>
+                            <h4 class="extra__subtitle">Personalización</h4>
+                            <span class="extra__quantity">Total</span>
+                        </article>
+                        <!-- Extra info 2 -->
+                        <article class="extra__info">
+                            <i class="extra__icon fa-solid fa-clock"></i>
+                            <h4 class="extra__subtitle">Horas de desarrollo</h4>
+                            <span class="extra__quantity">+120</span>
+                        </article>
+                        <!-- Extra info 3 -->
+                        <article class="extra__info">
+                            <i class="extra__icon fa-solid fa-star"></i>
+                            <h4 class="extra__subtitle">Mantenimiento</h4>
+                            <span class="extra__quantity">Permanente</span>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

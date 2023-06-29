@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- CARACTER Y ESCALA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- DESCRIPPCIÓN Y KEY WORDS -->
+    <meta name="description" content="Sitio de Nicolás Melgar dedicado al diseño y desarrollo web como Front End">
+    <meta name="keywwords"
+        content="FONTEND, FRONT END, DISEÑO WEB, DESARROLLO WEB, HTML, CSS, JAVASCRIPT, JAVA, SASS, BOOTSTRAP, GIT">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/img/LogoNMcuadrado.png" type="image/x-icon">
+
+    <!-- FONTAWERSOME directo asseets -->
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <!-- Hoja estilos CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+
+    <!-- Font-family:  Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+    </style>
+
+    <!-- Mi JS para menú -->
+    <script src="../js/menu.js" defer> </script>
+
+    <!-- TITULO -->
+    <title>N/M Desarrollo Web</title>
+
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- Barra lateral (info usuario) -->
+        <aside class="layout__aside">
+
+            <section class="aside__user-info">
+
+                <!-- Información general de usuario -->
+                <div class="user-info__general">
+                    <div class="user-info__container-imagen">
+                        <img class="user-info__imagen" src="../img/LentesSF.png" alt="Nicolas Melgar desarrollador web">
+                    </div>
+
+                    <h2 class="user-info__nombre">Nicolás Melgar</h2>
+                    <h4 class="user-info__trabajo">Desarrollador Web</h4>
+                </div>
+
+                <!-- Menú de navegación -->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="../../index.html">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Inicio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="sobreMi.html">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">Sobre Mi</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="estudios.html">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Estudios</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="portafolio.html">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="blog.html" id="bloqueo-blog">
+                                <i class="menu__icon fa-solid fa-book"></i>
+                                <span class="menu__overlay">Recursos</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="contacto.html">
+                                <i class="menu__icon fa-solid fa-envelope"></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!--  Iconos de redes sociales-->
+                <div class="user-info__links">
+                    <ul class="links__social">
+                        <li class="social_option">
+                            <a href="https://www.youtube.com/channel/UCL3P7mSnAlcI4cWkn4Hp_7Q" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-Y fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://www.linkedin.com/in/nicol%C3%A1s-melgar-6b9960270/" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-L fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://github.com/NicolasMelgar" class="social__link" target="_blank">
+                                <i class="social__icon-G fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Botón de descargar currículum-->
+                <div class="user-info__buttons">
+                    <a href="#" class="user-info__btn">Descargar CV</a>
+                </div>
+
+                <!-- Footer -->
+                <footer class="user-info__footer">
+                    &copy; 2023 Nicolás Melgar Deesarrollo Web
+
+                </footer>
+            </section>
+        </aside>
+
+        <!-- Menu responsive -->
+        <div class="layout__menu-toggle">
+            <i class="menu-toggle__icon fa-solid fa-bars"></i>
+            <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- Contenido principal -->
+        <main class="layout__content">
+            <section class="content__page content__blog">
+                <!-- ESTE CONTENIDO ES LO QUE CAMBIA ENTRE LAS PÁGINAS -->
+                <header class="blog__header">
+                    <h1 class="blog__title">
+                        Recursos
+                    </h1>
+                </header>
+
+                <section class="blog__articulo">
+
+                    <!-- Artículo 7 -->
+                    <article class="articulos__articulo">
+                        <div class="articulo__top">
+                            <div class="articulo__categoria">
+                                Utilidades HTML 5
+                            </div>
+                            <a href="recursosB.html" class="articulo__image-link" target="_blank">
+                                <div class="articulo__mascara">
+                                    <img class="articulo__img" src="../img/html.jpg" alt="Imagen de HTML 5">
+                                </div>
+                                <div class="articulo__logo">
+                                    <i class="articulo__icon fa-solid fa-book"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="articulo__bottom">
+                            <div class="articulo__date">29/06/2023</div>
+                            <a  href="recursosB.html" class="articulo__link" target="_blank">
+                                <h2 class="articulo__titulo">
+                                    Páginas de revisión de código - Documentación - Test de usabilidad - Ayudas varias
+                                </h2>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 8 -->
+                    <article class="articulos__articulo">
+                        <div class="articulo__top">
+                            <div class="articulo__categoria">
+                                Utilidades CSS 3
+                            </div>
+                            <a href="recursosC.html" class="articulo__image-link"
+                                target="_blank">
+                                <div class="articulo__mascara">
+                                    <img class="articulo__img" src="../img/css.jpg" alt="Imagen de CSS 3">
+                                </div>
+                                <div class="articulo__logo">
+                                    <i class="articulo__icon fa-solid fa-book"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="articulo__bottom">
+                            <div class="articulo__date">2*/06/2023</div>
+                            <a href="recursosC.html" class="articulo__link" target="_blank">
+                                <h2 class="articulo__titulo">
+                                    Paletas de colores - Gradientes - Animaciones - Utilidades en general
+                                </h2>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 1 -->
+                    <article class="articulos__articulo">
+                        <div class="articulo__top">
+                            <div class="articulo__categoria">
+                                HTML - CSS - JAVA
+                            </div>
+                            <a href="https://www.freecodecamp.org/" class="articulo__image-link" target="_blank">
+                                <div class="articulo__mascara">
+                                    <img class="articulo__img" src="../img/FCC.jpg" alt="imagen freecodecamp">
+                                </div>
+                                <div class="articulo__logo">
+                                    <i class="articulo__icon fa-solid fa-book"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="articulo__bottom">
+                            <div class="articulo__date">21/06/2023</div>
+                            <a href="https://www.freecodecamp.org/" class="articulo__link" target="_blank">
+                                <h2 class="articulo__titulo">
+                                    Cómo aprender a programar en 2023 - Gratis
+                                </h2>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 2 -->
+                    <article class="articulos__articulo">
+                        <div class="articulo__top">
+                            <div class="articulo__categoria">
+                                Programación
+                            </div>
+                            <a href="https://open-bootcamp.com/" class="articulo__image-link" target="_blank">
+                                <div class="articulo__mascara">
+                                    <img class="articulo__img" src="../img/openbootcamp.jpg" alt="imagen openbootcamp">
+                                </div>
+                                <div class="articulo__logo">
+                                    <i class="articulo__icon fa-solid fa-book"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="articulo__bottom">
+                            <div class="articulo__date">21/03/2023</div>
+                            <a href="https://open-bootcamp.com/" class="articulo__link" target="_blank">
+                                <h2 class="articulo__titulo">
+                                    Introducción a la programación en 2023 - Gratis
+                                </h2>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 3 -->
+                    <article class="articulos__articulo">
+                        <div class="articulo__top">
+                            <div class="articulo__categoria">
+                                Full Stack
+                            </div>
+                            <a href="https://fullstackopen.com/es/" class="articulo__image-link" target="_blank">
+                                <div class="articulo__mascara">
+                                    <img class="articulo__img" src="../img/helsinki.png"
+                                        alt="imagen curso universidad helsinki">
+                                </div>
+                                <div class="articulo__logo">
+                                    <i class="articulo__icon fa-solid fa-book"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="articulo__bottom">
+                            <div class="articulo__date">21/04/2023</div>
+                            <a href="https://fullstackopen.com/es/" class="articulo__link" target="_blank">
+                                <h2 class="articulo__titulo">
+                                    Full Stack de la Universisdad de Helsinki en 2023 - Gratis
+                                </h2>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 4 -->
+                    <article class="articulos__articulo">
+                        <div class="articulo__top">
+                            <div class="articulo__categoria">
+                                Proyecto
+                            </div>
+                            <a href="https://www.theodinproject.com/" class="articulo__image-link" target="_blank">
+                                <div class="articulo__mascara">
+                                    <img class="articulo__img" src="../img/odin.png" alt="imagen proyecto odin">
+                                </div>
+                                <div class="articulo__logo">
+                                    <i class="articulo__icon fa-solid fa-book"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="articulo__bottom">
+                            <div class="articulo__date">21/02/2023</div>
+                            <a href="https://www.theodinproject.com/" class="articulo__link" target="_blank">
+                                <h2 class="articulo__titulo">
+                                    Proyecto Odin para aprender a programar en 2023 - Gratis - Pago
+                                </h2>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 5 -->
+                    <article class="articulos__articulo">
+                        <div class="articulo__top">
+                            <div class="articulo__categoria">
+                                Prácticas HTML - CSS - JAVA
+                            </div>
+                            <a href="https://www.codewell.cc/challenges" class="articulo__image-link" target="_blank">
+                                <div class="articulo__mascara">
+                                    <img class="articulo__img" src="../img/codewell.png" alt="imagen de codewell">
+                                </div>
+                                <div class="articulo__logo">
+                                    <i class="articulo__icon fa-solid fa-book"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="articulo__bottom">
+                            <div class="articulo__date">21/02/2023</div>
+                            <a href="https://www.codewell.cc/challenges" class="articulo__link" target="_blank">
+                                <h2 class="articulo__titulo">
+                                    Proyecto Odin para aprender a programar en 2023 - Gratis - Pago
+                                </h2>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 6 -->
+                    <article class="articulos__articulo">
+                        <div class="articulo__top">
+                            <div class="articulo__categoria">
+                                Prácticas HTML - CSS - JAVA
+                            </div>
+                            <a href="https://www.frontendmentor.io/challenges" class="articulo__image-link"
+                                target="_blank">
+                                <div class="articulo__mascara">
+                                    <img class="articulo__img" src="../img/frontendMentor.png"
+                                        alt="Imagen de frontend mentor">
+                                </div>
+                                <div class="articulo__logo">
+                                    <i class="articulo__icon fa-solid fa-book"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="articulo__bottom">
+                            <div class="articulo__date">21/02/2023</div>
+                            <a href="https://www.frontendmentor.io/challenges" class="articulo__link" target="_blank">
+                                <h2 class="articulo__titulo">
+                                    Proyecto Odin para aprender a programar en 2023 - Gratis
+                                </h2>
+                            </a>
+                        </div>
+                    </article>
+
+
+                </section>
+
+
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

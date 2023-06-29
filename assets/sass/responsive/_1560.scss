@@ -1,0 +1,10 @@
+.layout__menu-toggle{
+    display: none;
+}
+
+@media (max-width: 1560px) {
+    .layout {
+        min-width: 50%;
+        width: 80%;
+    }
+}

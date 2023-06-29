@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- CARACTER Y ESCALA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- DESCRIPPCIÓN Y KEY WORDS -->
+    <meta name="description" content="Sitio de Nicolás Melgar dedicado al diseño y desarrollo web como Front End">
+    <meta name="keywwords"
+        content="FONTEND, FRONT END, DISEÑO WEB, DESARROLLO WEB, HTML, CSS, JAVASCRIPT, JAVA, SASS, BOOTSTRAP, GIT">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/img/LogoNMcuadrado.png" type="image/x-icon">
+
+    <!-- FONTAWERSOME directo asseets -->
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <!-- Hoja estilos CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+
+    <!-- Font-family:  Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+    </style>
+
+    <!-- Mi JS para menú -->
+    <script src="../js/menu.js" defer> </script>
+
+    <!-- TITULO -->
+    <title>N/M Desarrollo Web</title>
+
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- Barra lateral (info usuario) -->
+        <aside class="layout__aside">
+
+            <section class="aside__user-info">
+
+                <!-- Información general de usuario -->
+                <div class="user-info__general">
+                    <div class="user-info__container-imagen">
+                        <img class="user-info__imagen" src="../img/LentesSF.png" alt="Nicolas Melgar desarrollador web">
+                    </div>
+
+                    <h2 class="user-info__nombre">Nicolás Melgar</h2>
+                    <h4 class="user-info__trabajo">Desarrollador Web</h4>
+                </div>
+
+                <!-- Menú de navegación -->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="../../index.html">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Inicio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="sobreMi.html">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">Sobre Mi</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="estudios.html">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Estudios</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="portafolio.html">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="blog.html" id="bloqueo-blog">
+                                <i class="menu__icon fa-solid fa-book"></i>
+                                <span class="menu__overlay">Recursos</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="contacto.html">
+                                <i class="menu__icon fa-solid fa-envelope"></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!--  Iconos de redes sociales-->
+                <div class="user-info__links">
+                    <ul class="links__social">
+                        <li class="social_option">
+                            <a href="https://www.youtube.com/channel/UCL3P7mSnAlcI4cWkn4Hp_7Q" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-Y fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://www.linkedin.com/in/nicol%C3%A1s-melgar-6b9960270/" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-L fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://github.com/NicolasMelgar" class="social__link" target="_blank">
+                                <i class="social__icon-G fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Botón de descargar currículum-->
+                <div class="user-info__buttons">
+                    <a href="#" class="user-info__btn">Descargar CV</a>
+                </div>
+
+                <!-- Footer -->
+                <footer class="user-info__footer">
+                    &copy; 2023 Nicolás Melgar Deesarrollo Web
+
+                </footer>
+            </section>
+        </aside>
+
+        <!-- Menu responsive -->
+        <div class="layout__menu-toggle">
+            <i class="menu-toggle__icon fa-solid fa-bars"></i>
+            <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+        </div>
+        
+        <!-- Contenido principal -->
+        <main class="layout__content">
+            <section class="content__page content__blog">
+                <!-- ESTE CONTENIDO ES LO QUE CAMBIA ENTRE LAS PÁGINAS -->
+                <header class="recursosB__header">
+                    <h1 class="blog__title">
+                        Recursos HTML 5
+                    </h1>
+                </header>
+
+                <section class="blog__articulo">
+                    <!-- Artículo 1 -->
+                    <article class="recursos__articulo">
+                        <div class="articulo__box1"> 
+                            <p class="articulo__detalle">
+                            El siguiente link sire para validar o verificar la calidad de tu código HTML 5. Está creado por w3C y como consejo puedo decirte que empieces del error N°1, pues a veces, al reparar este se reparan muchos que estaban anclados el primer error. <br>
+                            Puedes ingresar la página web del sitio, subir tu archivo o copiar y pegar directamente tu código. 
+                            </p>
+                        </div>
+                        <div class="articulo__box2">
+                            <a href="https://validator.w3.org/" class="user-info__btn artículo__btn" target="_blank">Verificador</a>
+                        </div>
+                    </article>
+                
+                    <!-- Artículo 2 -->
+                    <article class="recursos__articulo">
+                        <div class="articulo__box1"> 
+                            <p class="articulo__detalle">
+                            El siguiente link sire para validar o verificar la calidad de tu código HTML 5. Está creado por Nu y como consejo puedo decirte que empieces del error N°1, pues a veces, al reparar este se reparan muchos que estaban anclados el primer error. <br>
+                            Puedes ingresar la página web del sitio, subir tu archivo o copiar y pegar directamente tu código. 
+                            </p>
+                        </div>
+                        <div class="articulo__box2">
+                            <a href="https://html5.validator.nu/" class="user-info__btn artículo__btn" target="_blank">Verificador</a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 3 -->
+                    <article class="recursos__articulo">
+                        <div class="articulo__box1"> 
+                            <p class="articulo__detalle">
+                            El siguiente link sire para verificar la velocidad de funcionamiento de tu sitio web. <br>
+                            A más alta puntuación más óptimo el rendimiento de tu web.
+                            </p>
+                        </div>
+                        <div class="articulo__box2">
+                            <a href="https://gtmetrix.com/" class="user-info__btn artículo__btn" target="_blank">Velocidad</a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 4 -->
+                    <article class="recursos__articulo">
+                        <div class="articulo__box1"> 
+                            <p class="articulo__detalle">
+                            El siguiente link sire para generar las etiquetas meta para tu sitio. Tema muy relevante en el SEO orgánico. <br>
+                            Pon tu sitio, carga los datos en caso de no cargarse automaticamente y copia las meta que desees...o todas. 
+                            </p>
+                        </div>
+                        <div class="articulo__box2">
+                            <a href="https://www.heymeta.com/" class="user-info__btn artículo__btn" target="_blank">Etiquetas</a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 5 -->
+                    <article class="recursos__articulo">
+                        <div class="articulo__box1"> 
+                            <p class="articulo__detalle">
+                            El siguiente link sire para verificar los link que has puesto en tu sitio. <br>
+                            En caso de no funcionar lo primero sería repararlo o vincularlo. En su defecto, puedes configurar una ventana para mostrar.
+                            </p>
+                        </div>
+                        <div class="articulo__box2">
+                            <a href="https://ahrefs.com/broken-link-checker" class="user-info__btn artículo__btn" target="_blank">Check links</a>
+                        </div>
+                    </article>
+                </section>
+
+
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

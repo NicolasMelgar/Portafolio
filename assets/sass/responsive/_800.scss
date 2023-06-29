@@ -1,0 +1,72 @@
+
+@media (max-width: 800px) {
+    .about__extra, .about__prices, .about__reviews{
+        text-align: center;
+    }
+
+    .reviews__container, 
+    .blog__articulo {
+        flex-direction: column;
+    }
+
+    .reviews__review{
+        flex-basis: 100%;
+    } 
+
+    .prices__container {
+        flex-direction: column;
+    }
+
+    .prices__box {
+        flex-basis: 100%;
+        margin: 1rem 1rem;
+    }
+
+    .prices__box:last-of-type {
+        margin-right: 1rem;
+    }
+
+    .content__portafolio, .portafolio__navbar{
+        text-align: center;
+    }
+
+    .portafolio__menu{
+        justify-content: space-evenly;
+    }
+    .portafolio__galeria {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .galeria__img{
+        width: 100%;
+        height: auto;
+    }
+
+    .about__personal-info {
+        flex-direction: column;
+        text-align: center;
+    }  
+    .personal-info__bio {
+        margin-bottom: 2rem;
+    }
+    .about__extra,
+    .about__prices,
+    .about__reviews,
+    .content__about,
+    .about__servicios {
+        text-align: center;
+        margin-bottom: 3rem;
+    }    
+    .servicios__container {
+        @include columna2;
+    }
+
+    .contacto__header{
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+}

@@ -1,0 +1,29 @@
+
+//sass --watch assets/sass/estilo.scss assets/css/estilo.css
+
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/generales";
+@import "./base/idNavbar";
+@import "./base/mixin";
+@import "./base/scroll";
+
+
+@import "./layout/inicio";
+@import "./layout/sobreMi";
+@import "./layout/estudios";
+@import "./layout/portafolio";
+@import "./layout/blog";
+@import "./layout/contacto";
+@import "./layout/recursosB";
+
+@import "./responsive/1560";
+@import "./responsive/1240";
+@import "./responsive/1024";
+@import "./responsive/800";
+@import "./responsive/700";
+@import "./responsive/586";
+@import "./responsive/425";
+@import "./responsive/375";
+
+

@@ -1,0 +1,37 @@
+/* ----   586   ----   */
+@media (max-width: 700px) {
+
+    .content__page {
+        margin: 0;
+        padding: 0;
+    }
+
+    .contacto__container{
+        @include columna2;
+
+    }
+
+    .contacto__info, 
+    .contacto__form-box{
+        margin: 0 5rem;
+    }
+
+    .content__contacto{
+        text-align: center;
+    }
+
+    .form__container{
+        @include columna2;
+    }
+
+    .form__left{
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+    .form__right{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+}

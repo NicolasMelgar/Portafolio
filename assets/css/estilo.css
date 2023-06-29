@@ -1,0 +1,1921 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Inter;
+  scroll-behavior: smooth; /*esto suaviza el pasaje de scroll*/
+  text-rendering: optimizeSpeed; /*esto optimiza la carga de fonts*/
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  font-family: inherit; /*esto hace que lo herede del padre*/
+  font-size: inherit;
+  color: inherit;
+}
+
+p a {
+  display: inline;
+}
+
+img, video, iframe, picture, figure {
+  max-width: 100%;
+  display: block;
+}
+
+form, input, select, textarea, button, label {
+  display: block;
+  font-family: inherit; /*esto hace que lo herede del padre*/
+  font-size: inherit;
+  color: inherit;
+}
+
+/* ESTILOS GENERALES */
+html {
+  font-size: 10px;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  font-family: Inter, Helvetica, sans-serif;
+  color: #555;
+  overflow: hidden;
+  font-size: 1.5rem;
+  /*gradiente generado en ultimate css*/
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#101554+19,1d439b+49,101554+80&0+0,0.8+8,1+19,1+81,0.8+92,0+100 */
+  background: -moz-linear-gradient(45deg, rgba(16, 21, 84, 0) 0%, rgba(16, 21, 84, 0.8) 8%, rgb(16, 21, 84) 19%, rgb(29, 67, 155) 49%, rgb(16, 21, 84) 80%, rgb(16, 21, 84) 81%, rgba(16, 21, 84, 0.8) 92%, rgba(16, 21, 84, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(16, 21, 84, 0) 0%, rgba(16, 21, 84, 0.8) 8%, rgb(16, 21, 84) 19%, rgb(29, 67, 155) 49%, rgb(16, 21, 84) 80%, rgb(16, 21, 84) 81%, rgba(16, 21, 84, 0.8) 92%, rgba(16, 21, 84, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(16, 21, 84, 0) 0%, rgba(16, 21, 84, 0.8) 8%, rgb(16, 21, 84) 19%, rgb(29, 67, 155) 49%, rgb(16, 21, 84) 80%, rgb(16, 21, 84) 81%, rgba(16, 21, 84, 0.8) 92%, rgba(16, 21, 84, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00101554", endColorstr="#00101554", GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222222;
+}
+
+/* Generales de varias páginas (SOBRE MI - ESTUDIOS - ETC */
+/*estas dos alturas sirven para fijar el contenido como quiero*/
+/*sobre-escribo el display flex del content__page con este en bloque*/
+.about__header,
+.resume__header,
+.portafolio__header,
+.blog__header,
+.contacto__header {
+  margin-bottom: 4rem;
+  display: inline-block;
+}
+
+.about__title,
+.resume__title,
+.portafolio__title,
+.blog__title,
+.contacto__title {
+  font-size: 3rem;
+  position: relative;
+}
+
+.servicios__header,
+.reviews__header,
+.clients__header,
+.prices__header,
+.extra__header,
+.resume__subheader,
+.contacto__form-header {
+  display: inline-block;
+  padding-right: 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/*El tamaño de este título me está pisando el del header*/
+.servicios__titulo,
+.reviews__title,
+.clients__title,
+.prices__title,
+.extra__title,
+.resume__subtitle,
+.contacto__title {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+/*ESTO ES PARA NO PODER HACER CLICK EN LA PÁGINA QUE ESTOY*/
+#bloqueo-sobreMi:hover .menu__icon,
+#bloqueo-contacto:hover .menu__icon,
+#bloqueo-blog:hover .menu__icon,
+#bloqueo-estudios:hover .menu__icon,
+#bloqueo-portafolio:hover .menu__icon,
+#bloqueo-inicio:hover .menu__icon {
+  opacity: 0.7;
+  pointer-events: none;
+  color: #355599;
+}
+
+/*Esto cambia el color del ícono en la página activa*/
+#bloqueo-sobreMi .fa-solid,
+#bloqueo-inicio .fa-solid,
+#bloqueo-contacto .fa-solid,
+#bloqueo-blog .fa-solid,
+#bloqueo-estudios .fa-solid,
+#bloqueo-portafolio .fa-solid {
+  color: rgb(44, 159, 125);
+  opacity: 0.9;
+}
+
+/*---   SCROLL PARA MOZ   ---*/
+/* este se complica porque moz no tiene como webkit*/
+.content__page {
+  scrollbar-width: auto;
+  scrollbar-color: #4372d7 transparent;
+}
+
+/*---   SCROLL PARA CHROME   ---*/
+/*ancho de la barra y color de fondo*/
+.content__page::-webkit-scrollbar {
+  width: 30px;
+  background: transparent;
+}
+
+/*el borde de caja al rededor de lo anterior*/
+.content__page::-webkit-scrollbar-thumb {
+  border: 10px solid transparent;
+  box-shadow: none;
+  border-radius: 4rem;
+}
+
+/*esta es la barra que se desplaza en la página*/
+.content__page:hover::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 10px #d3d3d4;
+}
+
+.content__page:hover::-webkit-scrollbar-thumb:hover {
+  border: 8px solid transparent;
+  box-shadow: inset 0 0 0 10px #4372d7;
+}
+
+/*esta es la caja que contiene todo el scroll*/
+.content__page::-webkit-scrollbar-track {
+  background-color: transparent;
+  margin: 4rem 0rem;
+}
+
+/*---   SCROLL PARA CHROME   ---*/
+/*LAYOUT ASIDE*/
+/*ancho de la barra y color de fondo*/
+.layout__aside::-webkit-scrollbar {
+  width: 30px;
+  background: var(--color-s); /*uso este color para que quede integrado e invisible en el layout*/
+}
+
+/*el borde de caja al rededor de lo anterior*/
+.layout__aside::-webkit-scrollbar-thumb {
+  border: 10px solid transparent;
+  box-shadow: none;
+  border-radius: 4rem;
+}
+
+/*esta es la barra que se desplaza en la página*/
+.layout__aside:hover::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 10px #ffffff;
+}
+
+.layout__aside:hover::-webkit-scrollbar-thumb:hover {
+  border: 8px solid transparent;
+  box-shadow: inset 0 0 0 10px #ffffff;
+}
+
+/*esta es la caja que contiene todo el scroll*/
+.layout__aside::-webkit-scrollbar-track {
+  background-color: transparent;
+  margin: 2rem 0rem;
+}
+
+/*LAYOUT PARA MOZILLA*/
+.layout__aside {
+  scrollbar-width: auto;
+  scrollbar-color: #264A99 #ffffff;
+}
+
+/*ESTRUCTURA PRINCIPAL*/
+.layout {
+  position: relative;
+  min-width: 1290px;
+  width: 75%;
+  height: 80vh;
+  /*como el valor es igual la altura es fija, así que en body va 100%*/
+  min-height: 80vh;
+  margin: 10vh auto;
+  /*esto centra la caja principal*/
+  /*Luego deberé vincular las áreas*/
+  display: grid;
+  grid-template-areas: "aside content";
+  grid-template-columns: 30% 70%;
+  /*sombra detras de layout*/
+  border-radius: 4rem;
+  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.65);
+}
+
+/*BARRA LATERAL AZUL (ASIDE)*/
+.layout__aside {
+  z-index: 1;
+  grid-area: aside;
+  /*vinculo el área aside*/
+  border-radius: 4rem 0 0 4rem;
+  /* esto overflow está pensado en lo responsive */
+  overflow: auto;
+  /*me coloca una barra de scroll si es necesaria*/
+  overflow-x: hidden;
+  /*me oculta lo que sobre de ancho, eje x*/
+}
+
+/*Caja con foto e información*/
+.aside__user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100%;
+  min-width: 30rem;
+  background-color: #264A99;
+  color: #ffffff;
+}
+
+/*Caja de mi imágen*/
+.user-info__container-imagen {
+  position: relative;
+  display: inline-block;
+  margin-top: 7rem;
+  width: 20rem;
+  background-color: #264A99;
+  /*esto es por si no se carga la img*/
+  border: 3px solid #355599;
+  border-radius: 30rem;
+  overflow: hidden;
+}
+
+.user-info__imagen {
+  margin-left: 2rem;
+  width: 100%;
+  filter: drop-shadow(0px 0px 15px #ffffff);
+}
+
+.user-info__nombre {
+  margin-top: 2.6rem;
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+.user-info__trabajo {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.user-info__links {
+  margin-bottom: 2rem;
+}
+
+.links__social {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.social_option {
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  opacity: 0.7;
+  border-radius: 2rem;
+  transition: all 500ms linear;
+}
+
+.social_option:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.social__icon-Y:hover {
+  color: red;
+}
+
+.social__icon-L:hover {
+  color: rgb(8, 66, 137);
+}
+
+.social__icon-G:hover {
+  color: rgb(2, 0, 0);
+}
+
+.user-info__buttons {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.user-info__btn {
+  border: 2px solid #ffffff;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  /*SOMBRA: desplazamiento vertical, despl horiz, difuminado, ancho imagen, color y opaciodad*/
+  box-shadow: 5px 8px 5px 1px rgba(0, 0, 0, 0.3);
+  transition: all 500ms ease-in-out;
+}
+
+.user-info__btn:hover {
+  background-color: #ffffff;
+  color: #04b4e0;
+}
+
+.user-info__footer {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 1rem;
+}
+
+/*CONTENIDO PRINCIPAL (CONTENT)*/
+.layout__content {
+  grid-area: content;
+  /*vinculo el área content*/
+  height: 100%;
+  min-height: 100%;
+  background-color: #264A99;
+  /*sup izq - sup dere - abajo der - abajo izq*/
+  border-radius: 0 10rem 10rem 0;
+}
+
+.content__page {
+  background-color: #ffffff;
+  min-height: 100%;
+  border-radius: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__name {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+.page__job {
+  font-size: 3rem;
+  font-weight: lighter;
+  color: #888;
+}
+
+/*MENU DE NAVEGACIÓN FIJA LATERAL*/
+.layout__menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -12.5rem;
+  min-width: 11rem;
+  border-color: transparent;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 60%;
+  min-height: 32rem;
+  padding: 2rem 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 3rem -1rem rgba(246, 241, 241, 0.8);
+  border-radius: 2.5rem;
+}
+
+.menu__option {
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: all 500ms ease-out;
+}
+
+.menu__option:hover .menu__icon {
+  color: #355599;
+}
+
+.menu__icon {
+  color: #b5b6b7;
+  font-size: 2.5rem;
+  transition: all 500ms ease-out;
+}
+
+.menu__overlay {
+  position: absolute;
+  right: 0;
+  margin-top: -3rem;
+  opacity: 0;
+  display: block;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: #355599;
+  font-size: 2rem;
+  /*esto lo uso para que no arme dos filas en "sobre mi"*/
+  white-space: nowrap;
+  transition: all 500ms ease-in;
+}
+
+.menu__option:hover .menu__overlay {
+  opacity: 1;
+  right: 80%;
+}
+
+/* --- SOBRE MI --- */
+/* Generales de varias páginas (SOBRE MI - ESTUDIOS - ETC */
+.content__about,
+.content__resume,
+.content__portafolio,
+.content__blog,
+.content__contacto {
+  overflow: auto;
+  /*estas dos alturas sirven para fijar el contenido como quiero*/
+  min-height: 100%;
+  height: 100%;
+  padding: 3rem;
+  padding-right: 3rem;
+  /*sobre-escribo el display flex del content__page con este en bloque*/
+  display: block;
+}
+
+.about__header,
+.resume__header,
+.portafolio__header,
+.blog__header,
+.contacto__header {
+  margin-bottom: 4rem;
+  display: inline-block;
+}
+
+.about__title,
+.resume__title,
+.portafolio__title,
+.blog__title,
+.contacto__title {
+  font-size: 3rem;
+  position: relative;
+}
+
+.servicios__header,
+.reviews__header,
+.clients__header,
+.prices__header,
+.extra__header,
+.resume__subheader,
+.contacto__form-header {
+  display: inline-block;
+  padding-right: 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/*El tamaño de este título me está pisando el del header*/
+.servicios__titulo,
+.reviews__title,
+.clients__title,
+.prices__title,
+.extra__title,
+.resume__subtitle,
+.contacto__title {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+/*personal info*/
+.about__personal-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /*esto lo coloco por si queiro modificarlo al responsive*/
+  margin-bottom: 4rem;
+  font-size: 1.7rem;
+}
+
+/*Caja con biografía*/
+.personal-info__bio {
+  flex-basis: 55%;
+  padding: 0 1.5rem;
+}
+
+/*Caja con datos personales*/
+.personal-info__data {
+  flex-basis: 45%;
+  padding: 0 1.5rem;
+}
+
+/*la biografía en sí*/
+.personal-info__description {
+  line-height: 3rem;
+}
+
+.personal-info__option {
+  margin-bottom: 1rem;
+}
+
+.personal-info__title {
+  color: rgba(44, 159, 125, 0.99);
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+.personal-info__value {
+  margin-right: 0.5rem;
+  font-size: 1.7rem;
+  line-height: 3rem;
+}
+
+/*Parte sobre servicios*/
+.about__servicios,
+.about__reviews,
+.about__clients,
+.about__prices,
+.about__extra {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.servicios__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.servicios__servicio {
+  flex-basis: 50%;
+  padding: 2rem 2rem;
+}
+
+/*Aca el fon y line son iguales que en la bio*/
+.servicio__descripcion {
+  font-size: 1.7rem;
+  line-height: 3rem;
+  font-style: italic;
+  text-align: start;
+}
+
+.servicio__icon .fa-solid {
+  color: rgba(44, 159, 125, 0.99);
+  font-size: 3rem;
+}
+
+/* ---   REVIEWS   --- */
+/* TARJETAS  */
+.reviews__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /*Esto me sirve si tengo más de 2 reviews, ahora tengo solo 2 y no hace efecto, pero lo dejo por las dudas*/
+  flex-wrap: wrap;
+}
+
+.reviews__review {
+  flex-basis: calc(50% - 1rem);
+  /*como solo use la prop margin, tengo que sumar izq y derecha para que funcione)*/
+  padding: 2rem 2rem;
+  border: 2px solid #b5b6b7;
+  border-radius: 2rem;
+  margin: 4rem 0.5rem;
+}
+
+/*imágenes de tarjetas reviews*/
+.review__image-container {
+  width: 100%;
+}
+
+.review__image {
+  max-width: 15rem;
+  max-height: 15rem;
+  border: 3px solid #b5b6b7;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px -2px rgba(0, 0, 0, 0.2);
+  /*le pongo este background porque sino se me cruzan las líneas grices*/
+  background-color: #b5b6b7;
+  /*Esto coloca la imagen en el medio y me permite modificarlo para subirla o bajarla*/
+  margin: 0 auto;
+  margin-top: -6rem;
+  margin-bottom: 2rem;
+}
+
+.review__description {
+  margin-bottom: 1rem;
+}
+
+.review__text {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+.review__autor {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.review__nombre {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.review__company {
+  color: #b5b6b7;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.review__icon {
+  font-size: 4rem;
+  color: rgba(44, 159, 125, 0.99);
+  opacity: 0.5;
+}
+
+/* --- Clientes --- */
+.about__clients {
+  width: 100%;
+}
+
+.clients__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.clients__link {
+  display: block;
+  width: 100%;
+  opacity: 0.5;
+  transition: all 500ms linear;
+}
+
+.clients__link:hover {
+  opacity: 1;
+  background-color: #b5b6b7;
+  border-radius: 50%;
+}
+
+.clients__image {
+  width: 14rem;
+  padding: 1.5rem;
+}
+
+/*Precios*/
+.prices__container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rem;
+}
+
+.prices__box {
+  height: 100%;
+  border: 3px solid #b5b6b7;
+  flex-basis: 50%;
+  padding: 2rem;
+  margin-right: 3rem;
+  text-align: center;
+  border-radius: 2rem;
+  transition: all 500ms ease-in;
+}
+
+.prices__box:last-of-type {
+  margin-right: 0rem;
+}
+
+.prices__box:hover {
+  box-shadow: 0 18px 24px -5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1rem);
+}
+
+.prices__subtitle {
+  margin-bottom: 1rem;
+}
+
+.prices__text {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.prices__box:hover .prices__text::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  background-color: rgba(44, 159, 125, 0.99);
+}
+
+.prices__price {
+  padding-bottom: 1rem;
+}
+
+.prices__number {
+  font-size: 3rem;
+  line-height: 1;
+  color: #222222;
+}
+
+.prices__advice {
+  color: #b5b6b7;
+  display: block;
+  font-size: 1.5rem;
+}
+
+/*boton comprar*/
+.prices__buy {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.prices__btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border: 2px solid #b5b6b7;
+  box-shadow: 0 10px 10px -5px #b5b6b7;
+  border-radius: 3rem;
+  transition: all 500ms linear;
+  font-size: 1.5rem;
+}
+
+.prices__btn:hover {
+  background-color: rgba(44, 159, 125, 0.99);
+  color: #ffffff;
+  border: 2px solid #b5b6b7;
+}
+
+.prices__reward {
+  font-size: 1.5rem;
+  padding: 0.6rem 0;
+}
+
+/*información extra*/
+.extra__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.extra__info {
+  flex-basis: 30%;
+  border: 2px solid #b5b6b7;
+  text-align: center;
+  border-radius: 2rem;
+  font-size: 2rem;
+  padding: 2rem 1rem;
+  transition: all 500ms ease-in-out;
+}
+
+.extra__info:hover {
+  box-shadow: 0 18px 24px -5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.5rem);
+}
+
+.extra__icon {
+  font-size: 3rem;
+  color: rgba(44, 159, 125, 0.99);
+  margin-bottom: 1rem;
+}
+
+.extra__subtitle {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+}
+
+.extra__quantity {
+  display: block;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  margin-top: 1rem;
+  color: #b5b6b7;
+}
+
+/* --- ESTUDIOS ---*/
+.resume__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.resume__left {
+  flex-basis: 55%;
+  margin-right: 1.5rem;
+}
+
+.resume__divlines {
+  padding-bottom: 3rem;
+}
+
+.timelines__timeline {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.timeline__header {
+  flex-basis: 30%;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.timeline__year {
+  font-weight: 600;
+  margin: 0.3rem 0;
+  line-height: 1.9rem;
+  font-size: 1.4rem;
+}
+
+.timeline__company {
+  display: block;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #b5b6b7;
+  margin-bottom: 1rem;
+}
+
+.timeline__description {
+  width: 70%;
+  padding-left: 2.5rem;
+  padding-right: 1.5rem;
+}
+
+.timeline__title {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline__description-P {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.timeline__divider {
+  background-color: #b5b6b7;
+  width: 1px;
+}
+
+.timeline__divider::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-top: 0.4rem;
+  margin-left: -0.8rem;
+  background-color: rgba(44, 159, 125, 0.8);
+}
+
+.timeline__divider::after {
+  content: "";
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  margin-top: 0.75rem;
+  margin-left: -0.5rem;
+  border: 3px solid rgba(44, 159, 125, 0.99);
+  background-color: rgba(112, 234, 197, 0.959);
+}
+
+/* ---- Lado derecho ---- */
+.resume__right {
+  flex-basis: 45%;
+}
+
+.resume__skills {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.skills__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.skills__text {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.skills__number {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #b5b6b7;
+}
+
+.skills__progressbar {
+  width: 100%;
+  border: 3px solid rgba(44, 159, 125, 0.99);
+  height: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skills__progressbar:last-child {
+  margin-bottom: 5rem;
+}
+
+.skills__percent--p1 {
+  width: 80%;
+}
+
+.skills__percent--p2 {
+  width: 75%;
+}
+
+.skills__percent--p3 {
+  width: 60%;
+}
+
+.skills__percent--p4 {
+  width: 65%;
+}
+
+.skills__percent--p5 {
+  width: 80%;
+}
+
+.skills__percent--p6 {
+  width: 90%;
+}
+
+.skills__percent--p7 {
+  width: 95%;
+}
+
+.skills__percent--p8 {
+  width: 80%;
+}
+
+.skills__percent--p9 {
+  width: 90%;
+}
+
+.skills__percent--p10 {
+  width: 97%;
+}
+
+.skills__percent--p11 {
+  width: 91%;
+}
+
+.skills__percent--p12 {
+  width: 96%;
+}
+
+.skills__percent {
+  height: calc(1.5rem - 3px); /*estos 3 px son del ancho del borde*/
+  border-radius: 1rem;
+  background-color: rgba(44, 159, 125, 0.99);
+  opacity: 0.8;
+}
+
+.certificates__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.certificates__certificate {
+  flex-basis: calc(50% - 2rem);
+  border: 3px solid rgba(44, 159, 125, 0.99);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.certificate__logo {
+  width: 70%;
+  height: 100%;
+  background-color: rgba(44, 159, 125, 0.99);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+.certificate__img {
+  width: 100%;
+  border-radius: 2rem;
+  height: 50vh;
+  transition: all 900ms ease-in;
+}
+
+.certificate__img:hover {
+  transform: translateX(80px);
+  scale: 1.4;
+  cursor: pointer;
+}
+
+.certificate__content {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.certificate__id {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: #b5b6b7;
+}
+
+.certificate__date {
+  color: #b5b6b7;
+  opacity: 0.7;
+  font-size: 1.2rem;
+}
+
+/* --- PORTAFOLIO ---*/
+.portafolio__navbar {
+  margin-bottom: 3rem;
+}
+
+.portafolio__menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.portafolio__opciones {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.portafolio__opciones--activo {
+  opacity: 1;
+}
+
+.portafolio__link {
+  cursor: pointer;
+}
+
+.portafolio__link:hover {
+  color: rgba(44, 159, 125, 0.99);
+  font-weight: bold;
+  text-shadow: 3px 3px 10px rgb(62, 52, 52);
+}
+
+.portafolio__galeria {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.galeria__item {
+  position: relative;
+  flex-basis: 50%;
+  padding: 0.7rem;
+}
+
+.galeria__container--img {
+  overflow: hidden;
+}
+
+.galeria__img {
+  transition: all 500ms ease-in-out;
+  width: auto;
+  /*esta altura la uso porque las img tienen diferentes alturas*/
+  height: 30rem;
+}
+
+/*Que este scale quede dentro de la caja es porque el contenedor tiene overflow hidden*/
+.galeria__item:hover .galeria__img {
+  transform: scale(1.1);
+}
+
+.galeria__titulo {
+  padding: 1.5rem 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/*Estos dos elementos tendrán opacidad 0
+de modo que cuando haga hover la pongo en 1
+entonces solo se ven al hacer hover*/
+.galeria__icon {
+  opacity: 0;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 3rem;
+  background-color: #ffffff;
+  color: rgba(44, 159, 125, 0.99);
+  transition: all 500ms ease-in-out;
+}
+
+.galeria__categoria {
+  opacity: 0;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0 0.7rem;
+  width: auto;
+  height: 3rem;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 3rem;
+  background-color: #ffffff;
+  color: rgba(44, 159, 125, 0.99);
+  transition: all 500ms ease-in-out;
+}
+
+/*como los elementos están en item hago hover ahí
+y lo aplico en icon y categoría*/
+.galeria__item:hover .galeria__icon,
+.galeria__item:hover .galeria__categoria {
+  opacity: 1;
+}
+
+/* --- BLOG ---*/
+.blog__articulo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.articulos__articulo {
+  flex-basis: 50%;
+  padding: 0 1.5rem;
+  padding-bottom: 3rem;
+}
+
+/* ---Parte Top--- */
+.articulo__top {
+  position: relative;
+  overflow: hidden;
+}
+
+.articulo__categoria {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  padding: 0.2rem 0.7rem;
+  color: rgba(44, 159, 125, 0.99);
+  background-color: #ffffff;
+  z-index: 1; /*esto me deja por delante la etiqueta*/
+}
+
+.articulo__mascara {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.articulo__img {
+  display: block;
+  transition: all 600ms ease-in-out;
+}
+
+.articulo__top:hover .articulo__img {
+  transform: scale(1.4);
+}
+
+.articulo__icon {
+  position: absolute;
+  top: calc(50% - 2rem);
+  left: calc(50% - 2rem);
+  font-size: 4rem;
+  color: rgba(44, 159, 125, 0.99);
+  width: 4rem;
+  text-align: center;
+}
+
+.articulo__logo {
+  transition: all 500ms ease;
+  opacity: 0;
+}
+
+.articulo__top:hover .articulo__logo {
+  opacity: 1;
+}
+
+/* ----Parte Bottom--- */
+.articulo__bottom {
+  margin: 0;
+  padding: 1rem 2rem;
+  border: 2px solid #b5b6b7;
+  border-top: 0; /*esto le saca el borde arriba*/
+}
+
+.articulo__date {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #b5b6b7;
+}
+
+.articulo__titulo {
+  font-size: 1.8rem;
+}
+
+/* ---Contacto---*/
+.contacto__container {
+  display: flex;
+  flex-direction: row;
+  /*Ojo con esto porque lo use para que las cuatro cajaas quedarán del espacio*/
+  margin-top: -3rem;
+}
+
+.contacto__info {
+  flex-basis: 30%;
+  padding: 0 1rem;
+}
+
+.contacto__data {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #f2f7f9;
+  border: 1px solid #b5b6b7;
+}
+
+.contacto__icon {
+  font-size: 3rem;
+  color: rgba(44, 159, 125, 0.99);
+}
+
+.contacto__subtitulo {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contacto__form-box {
+  flex-basis: 70%;
+  padding: 0 1rem;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form__left {
+  flex-basis: 50%;
+  margin-right: 1.5rem;
+}
+
+.form__grupo {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.form__input,
+.form__input-textarea {
+  position: relative;
+  width: 100%;
+  display: block;
+  border: 2px solid #b5b6b7;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  outline: none;
+  color: #b5b6b7;
+  box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+}
+
+.form__input:focus {
+  border: 2px solid rgba(44, 159, 125, 0.99);
+}
+
+.form__label {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  z-index: -1;
+  color: rgba(44, 159, 125, 0.99);
+  transition: all 700ms ease-in-out;
+}
+
+/*Esto hace aparecer el label y parece que sale del input*/
+.form__input:focus ~ label {
+  top: -2rem;
+  left: 0;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+
+/*Esto me oculta los placeholder*/
+.form__input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form__input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/*Todo esto es para que el text area no sea manipulable*/
+.form__right {
+  flex-basis: 50%;
+  max-width: 50%;
+  max-height: 100%;
+}
+
+.form__group-textarea {
+  height: 100%;
+}
+
+.form__input-textarea {
+  display: block;
+  height: 100%;
+  resize: none;
+}
+
+/*Botón enviar*/
+.form__btn {
+  cursor: pointer;
+  width: 20rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 0.5);
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  border: 2px solid #b5b6b7;
+  background-color: #355599;
+  color: #ffffff;
+  transition: all 500ms linear;
+}
+
+.form__btn:hover {
+  color: #ffffff;
+  background-color: rgba(44, 159, 125, 0.99);
+}
+
+.contacto__map {
+  position: relative;
+  width: 100%;
+  min-height: 13rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.contacto__iframe {
+  height: 13rem;
+  width: 100%;
+}
+
+/* loader descargado */
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  color: rgba(44, 159, 125, 0.99);
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 20rem;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+
+.loader:after {
+  color: #264A99;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+@keyframes spin {
+  0%, 100% {
+    box-shadow: 0.3em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.3em 0.3em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.3em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.3em 0.3em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.3em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.3em -0.3em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.3em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.3em -0.3em 0 0 currentcolor;
+  }
+}
+.recursosB__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.recursos__articulo {
+  flex-basis: 100%;
+  justify-content: center;
+  border-bottom: 3px solid #355599;
+  margin: 0 2rem;
+}
+
+.articulo__box1 {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.articulo__detalle {
+  font-size: 1.5rem;
+}
+
+.articulo__box2 {
+  margin: 1rem 0;
+}
+
+.artículo__btn {
+  text-align: center;
+  color: rgba(44, 159, 125, 0.99);
+  max-width: 20rem;
+  margin: 0 auto;
+  padding: 1rem 5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 2px solid #b5b6b7;
+}
+.artículo__btn:hover {
+  color: #ffffff;
+  background-color: #264A99;
+}
+
+.layout__menu-toggle {
+  display: none;
+}
+
+@media (max-width: 1560px) {
+  .layout {
+    min-width: 50%;
+    width: 80%;
+  }
+}
+@media (max-width: 1240px) {
+  .layout {
+    width: 85%;
+    margin-left: 3rem;
+  }
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    position: static;
+    background-color: #264A99;
+  }
+  .layout {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    border-radius: 0;
+    grid-template-areas: "content";
+    grid-template-columns: 100%;
+    overflow: hidden;
+  }
+  .menu-toggle__icon {
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: 28%;
+    transition: all 500ms ease-in-out;
+  }
+  .fa-bars {
+    opacity: 1;
+  }
+  .fa-xmark {
+    opacity: 0;
+  }
+  .layout__menu-toggle {
+    z-index: 3;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5.2rem;
+    text-align: center;
+    background-color: #264A99;
+    color: #ffffff;
+    font-size: 2.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all 300ms linear;
+  }
+  .layout__aside {
+    display: block;
+    position: absolute;
+    max-width: 300px;
+    top: 0;
+    right: -10px;
+    bottom: 0;
+    border-radius: 0;
+    text-align: center;
+    overflow: auto;
+    z-index: 2;
+    margin-right: -100%;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+  }
+  .layout__aside--visible {
+    width: 100%;
+    margin-right: 0;
+    opacity: 1;
+  }
+  .layout__aside--oculto {
+    margin-right: -100%;
+    opacity: 0;
+  }
+  .layout__menu {
+    position: static;
+    margin: 0;
+  }
+  .user-info__container-imagen {
+    width: 20rem;
+    margin-top: 2rem;
+    display: inline-block;
+  }
+  .user-info__nombre {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  #bloqueo-inicio .menu__overlay,
+  #bloqueo-sobreMi .menu__overlay,
+  #bloqueo-contacto .menu__overlay,
+  #bloqueo-blog .menu__overlay,
+  #bloqueo-portafolio .menu__overlay,
+  #bloqueo-estudios .menu__overlay {
+    opacity: 0.5;
+    pointer-events: none;
+    color: var(--color-verde);
+  }
+  #bloqueo-inicio:hover .menu__overlay,
+  #bloqueo-sobreMi:hover .menu__overlay,
+  #bloqueo-contacto:hover .menu__overlay,
+  #bloqueo-blog:hover .menu__overlay,
+  #bloqueo-portafolio:hover .menu__overlay,
+  #bloqueo-estudios:hover .menu__overlay {
+    opacity: 1;
+  }
+  .menu__icon {
+    display: none;
+  }
+  .menu__list {
+    position: static;
+    width: 100%;
+    background-color: #264A99;
+    box-shadow: none;
+    margin-left: 0;
+    padding: 0;
+    min-height: auto;
+  }
+  .menu__overlay {
+    position: static;
+    opacity: 0.7;
+    background-color: transparent;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    margin-top: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  .user-info__links {
+    margin-bottom: 1rem;
+  }
+  .links__social {
+    margin-top: 1rem;
+  }
+  .user-info__footer {
+    position: static;
+    padding-bottom: 2rem;
+  }
+  .layout__content {
+    border-radius: 0;
+    background-color: transparent;
+    height: 100%;
+  }
+  .content__page {
+    border-radius: 0;
+    height: 100vh;
+  }
+  .contacto__info, .contacto__form-box {
+    margin: 1rem 1rem;
+  }
+  .contacto__container {
+    flex-direction: column;
+  }
+  .contacto__data {
+    margin-bottom: 3rem;
+    padding: 2rem 2rem;
+  }
+}
+@media (max-width: 800px) {
+  .about__extra, .about__prices, .about__reviews {
+    text-align: center;
+  }
+  .reviews__container,
+  .blog__articulo {
+    flex-direction: column;
+  }
+  .reviews__review {
+    flex-basis: 100%;
+  }
+  .prices__container {
+    flex-direction: column;
+  }
+  .prices__box {
+    flex-basis: 100%;
+    margin: 1rem 1rem;
+  }
+  .prices__box:last-of-type {
+    margin-right: 1rem;
+  }
+  .content__portafolio, .portafolio__navbar {
+    text-align: center;
+  }
+  .portafolio__menu {
+    justify-content: space-evenly;
+  }
+  .portafolio__galeria {
+    flex-direction: column;
+    text-align: center;
+  }
+  .galeria__img {
+    width: 100%;
+    height: auto;
+  }
+  .about__personal-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .personal-info__bio {
+    margin-bottom: 2rem;
+  }
+  .about__extra,
+  .about__prices,
+  .about__reviews,
+  .content__about,
+  .about__servicios {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .servicios__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacto__header {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* ----   586   ----   */
+@media (max-width: 700px) {
+  .content__page {
+    margin: 0;
+    padding: 0;
+  }
+  .contacto__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacto__info,
+  .contacto__form-box {
+    margin: 0 5rem;
+  }
+  .content__contacto {
+    text-align: center;
+  }
+  .form__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__left {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  .form__right {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+/* ----   586   ----   */
+@media (max-width: 586px) {
+  .content__page {
+    margin: 0;
+    padding: 0;
+  }
+  /*Parte de información extra en sobre mi*/
+  .extra__container,
+  .resume__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .extra__info {
+    margin: 2rem;
+  }
+  .about__servicios {
+    flex-basis: 100%;
+  }
+  .resume__left,
+  .resume__right,
+  .reviews__review,
+  .servicios__servicio {
+    margin: 1rem 1rem;
+  }
+  .content__resume {
+    text-align: center;
+  }
+  .resume__header {
+    margin-top: 2rem;
+  }
+  .resume__right {
+    justify-content: center;
+  }
+  .contacto__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacto__info,
+  .contacto__form-box {
+    margin: 0 5rem;
+  }
+  .content__contacto {
+    text-align: center;
+  }
+  .form__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__left {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  .form__right {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 426px) {
+  .certificates__certificate {
+    display: flex;
+    flex-direction: column;
+  }
+  .certificate__logo {
+    width: 100%;
+  }
+  .page__name {
+    text-align: center;
+  }
+  .about__header, .portafolio__header {
+    margin: 2rem auto;
+  }
+  .blog__header {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .reviews__review {
+    margin: 3rem auto;
+  }
+  .loader:before,
+  .loader:after {
+    left: 15rem;
+    top: 3rem;
+  }
+}
+@media (max-width: 376px) {
+  .page__name {
+    text-align: center;
+  }
+  .timelines__timeline {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    border: 2px solid #b5b6b7;
+  }
+  .timeline__divider {
+    display: none;
+  }
+  .timeline__description {
+    width: 100%;
+  }
+  .loader:before,
+  .loader:after {
+    left: 10rem;
+  }
+  .contacto__header {
+    margin-top: 2rem;
+  }
+  .contacto__info, .contacto__form-box {
+    margin: 1rem 1rem;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */

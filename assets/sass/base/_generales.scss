@@ -1,0 +1,98 @@
+/* ESTILOS GENERALES */
+
+html {
+    font-size: 10px;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    font-family: Inter, Helvetica, sans-serif;
+    color: $color-text;
+    overflow: hidden;
+    font-size: 1.5rem;
+    /*gradiente generado en ultimate css*/
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#101554+19,1d439b+49,101554+80&0+0,0.8+8,1+19,1+81,0.8+92,0+100 */
+    background: -moz-linear-gradient(45deg, rgba(16, 21, 84, 0) 0%, rgba(16, 21, 84, 0.8) 8%, rgba(16, 21, 84, 1) 19%, 
+    rgba(29, 67, 155, 1) 49%, rgba(16, 21, 84, 1) 80%, rgba(16, 21, 84, 1) 81%, rgba(16, 21, 84, 0.8) 92%, rgba(16, 21, 84, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(16, 21, 84, 0) 0%, rgba(16, 21, 84, 0.8) 8%, rgba(16, 21, 84, 1) 19%, 
+    rgba(29, 67, 155, 1) 49%, rgba(16, 21, 84, 1) 80%, rgba(16, 21, 84, 1) 81%, rgba(16, 21, 84, 0.8) 92%, rgba(16, 21, 84, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba(16, 21, 84, 0) 0%, rgba(16, 21, 84, 0.8) 8%, rgba(16, 21, 84, 1) 19%,
+     rgba(29, 67, 155, 1) 49%, rgba(16, 21, 84, 1) 80%, rgba(16, 21, 84, 1) 81%, rgba(16, 21, 84, 0.8) 92%, rgba(16, 21, 84, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00101554', endColorstr='#00101554', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+        
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-titulos;
+}
+
+/* Generales de varias páginas (SOBRE MI - ESTUDIOS - ETC */
+// .content__about,
+// .content__resume, 
+// .content__portafolio,
+// .content__blog, 
+// .content__contacto {
+//     overflow: auto;
+    /*estas dos alturas sirven para fijar el contenido como quiero*/
+    // min-height: 100%;
+    // height: 100%;
+    // padding: 6rem;
+    // padding-right: 3rem;
+    /*sobre-escribo el display flex del content__page con este en bloque*/
+//     display: block;
+// }
+
+.about__header,
+.resume__header, 
+.portafolio__header, 
+.blog__header, 
+.contacto__header {
+    margin-bottom: 4rem;
+    display: inline-block;
+}
+
+.about__title,
+.resume__title, 
+.portafolio__title, 
+.blog__title, 
+.contacto__title {
+    font-size: 3rem;
+    position: relative;
+}
+
+.servicios__header,
+.reviews__header,
+.clients__header,
+.prices__header,
+.extra__header,
+.resume__subheader, 
+.contacto__form-header{
+    display: inline-block;
+    padding-right: 1rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/*El tamaño de este título me está pisando el del header*/
+.servicios__titulo,
+.reviews__title,
+.clients__title,
+.prices__title,
+.extra__title, 
+.resume__subtitle, 
+.contacto__title {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}

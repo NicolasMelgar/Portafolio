@@ -1,0 +1,15 @@
+@mixin columna{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin fila{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin columna2{
+    display: flex;
+    flex-direction: column;
+}

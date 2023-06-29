@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- CARACTER Y ESCALA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- DESCRIPPCIÓN Y KEY WORDS -->
+    <meta name="description" content="Sitio de Nicolás Melgar dedicado al diseño y desarrollo web como Front End">
+    <meta name="keywwords"
+        content="FONTEND, FRONT END, DISEÑO WEB, DESARROLLO WEB, HTML, CSS, JAVASCRIPT, JAVA, SASS, BOOTSTRAP, GIT">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/img/LogoNMcuadrado.png" type="image/x-icon">
+
+    <!-- FONTAWERSOME directo asseets -->
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <!-- Hoja estilos CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+
+
+    <!-- Font-family:  Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+    </style>
+
+    <!-- Mi JS para menú -->
+    <script src="../js/menu.js" defer> </script>
+
+    <!-- TITULO -->
+    <title>N/M Desarrollo Web</title>
+
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- Barra lateral (info usuario) -->
+        <aside class="layout__aside">
+
+            <section class="aside__user-info">
+
+                <!-- Información general de usuario -->
+                <div class="user-info__general">
+                    <div class="user-info__container-imagen">
+                        <img class="user-info__imagen" src="../img/LentesSF.png" alt="Nicolas Melgar desarrollador web">
+                    </div>
+
+                    <h2 class="user-info__nombre">Nicolás Melgar</h2>
+                    <h4 class="user-info__trabajo">Desarrollador Web</h4>
+                </div>
+
+                <!-- Menú de navegación -->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="../../index.html">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Inicio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="sobreMi.html">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">Sobre Mi</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="estudios.html" id="bloqueo-estudios">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Estudios</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="portafolio.html">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="blog.html">
+                                <i class="menu__icon fa-solid fa-book"></i>
+                                <span class="menu__overlay">Blog</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="contacto.html">
+                                <i class="menu__icon fa-solid fa-envelope"></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!--  Iconos de redes sociales-->
+                <div class="user-info__links">
+                    <ul class="links__social">
+                        <li class="social_option">
+                            <a href="https://www.youtube.com/channel/UCL3P7mSnAlcI4cWkn4Hp_7Q" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-Y fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://www.linkedin.com/in/nicol%C3%A1s-melgar-6b9960270/" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-L fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://github.com/NicolasMelgar" class="social__link" target="_blank">
+                                <i class="social__icon-G fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Botón de descargar currículum-->
+                <div class="user-info__buttons">
+                    <a href="#" class="user-info__btn">Descargar CV</a>
+                </div>
+
+                <!-- Footer -->
+                <footer class="user-info__footer">
+                    &copy; 2023 Nicolás Melgar Deesarrollo Web
+
+                </footer>
+            </section>
+        </aside>
+
+        <!-- Menu responsive -->
+        <div class="layout__menu-toggle">
+            <i class="menu-toggle__icon fa-solid fa-bars"></i>
+            <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+        </div>
+        
+        <!-- Contenido principal -->
+        <main class="layout__content">
+            <section class="content__page content__resume">
+                <!-- ESTE CONTENIDO ES LO QUE CAMBIA ENTRE LAS PÁGINAS -->
+                <header class="resume__header">
+                    <h1 class="resume__title">
+                        Estudios y habilidades
+                    </h1>
+                </header>
+
+                <section class="resume__container">
+
+                    <section class="resume__left">
+                        <!-- CURRICULUM -->
+                        <header class="resume__subheader">
+                            <h2 class="resume__subtitle">
+                                Formación
+                            </h2>
+                        </header>
+                        <div class="resume__timelines">
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year"> Enero-Junio 2023 </h4>
+                                    <span class="timeline__company">FreeCodeCamp</span>
+                                    <span class="timeline__company">OpenBootcamp</span>
+                                    <span class="timeline__company">Coderhouse</span>
+                                </header>
+
+                                <div class="timeline__divider">
+
+                                </div>
+
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Desarrollo web </h3>
+                                    <p class="timeline__description-P">
+                                        Tanto los temas de programación como de HTL 5 y CSS 3 han sido tocados en todas
+                                        estas instituciones para generar una base sólida.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year"> Julio-Diciembre 2023 </h4>
+                                    <span class="timeline__company">FreeCodeCamp</span>
+                                    <span class="timeline__company">OpenBootcamp</span>
+                                    <span class="timeline__company">Coderhouse</span>
+                                </header>
+
+                                <div class="timeline__divider">
+
+                                </div>
+
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Java y React </h3>
+                                    <p class="timeline__description-P">
+                                        El paso siguiente será profundizar en el lenguaje de programación JAVA.
+                                        Luego, tomar los cursos pagos de Coderhouse en JavaScript y React, pues con
+                                        ellos se completa la carrera de desarrollador web.
+                                        Asimismo, los cursos de OBT y FCC se realizarán en paralelo como se hizo con
+                                        HTML 5 y CSS 3.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- EXPERIENCIA -->
+                        <header class="resume__subheader">
+                            <h2 class="resume__subtitle">
+                                Experiencia
+                            </h2>
+                        </header>
+                        <div class="resume__timelines">
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year"> 2021 - Act. </h4>
+                                    <span class="timeline__company">Clientes particulares</span>
+                                    <div class="servicio__icon">
+                                        <i class="fa-solid fa-code"></i>
+                                    </div>
+                                </header>
+
+                                <div class="timeline__divider">
+
+                                </div>
+
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Desarrollador web freelance </h3>
+                                    <p class="timeline__description-P">
+                                        En vista de mi intención de trabajar remoto, los clientes particulares para
+                                        creación de sitios web ha sido una buena opción
+                                        para adquirir experiencia y poder mostrar los proyectos con el permiso del
+                                        cliente en mi portafolio.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year"> 2020 - Act. </h4>
+                                    <span class="timeline__company">Educación</span>
+                                    <div class="servicio__icon">
+                                        <i class="fa-solid fa-chess"></i>
+                                    </div>
+                                </header>
+
+                                <div class="timeline__divider">
+
+                                </div>
+
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Instructor - Profesor</h3>
+                                    <p class="timeline__description-P">
+                                        Ejercicio del cargo de instructor de Ajedrez y Profesor de Matemática en
+                                        secundaria.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <div class="resume__timelines">
+
+
+                                <article class="timelines__timeline">
+                                    <header class="timeline__header">
+                                        <h4 class="timeline__year"> 2005 - Act. </h4>
+                                        <span class="timeline__company">Educación</span>
+                                        <div class="servicio__icon">
+                                            <i class="fa-solid fa-chalkboard-user"></i>
+                                        </div>
+                                    </header>
+
+                                    <div class="timeline__divider">
+
+                                    </div>
+
+                                    <div class="timeline__description">
+                                        <h3 class="timeline__title">Profesor de Educación Primaria</h3>
+                                        <p class="timeline__description-P">
+                                            Ejercicio de la docencia en escuelas de educación primaria.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="resume__right">
+                        <!-- HABILIDADES DESARROLLO -->
+                        <header class="resume__subheader">
+                            <h2 class="resume__subtitle">
+                                Habilidades de desarrollo
+                            </h2>
+                        </header>
+                        <div class="resume__skills">
+                            <!-- HTML5 -->
+
+                            <article class="skills__title">
+                                <h4 class="skills__text">HTML5</h4>
+                                <span class="skills__number">80%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p1"></div>
+                            </div>
+
+
+                            <!-- CSS3 -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">CSS3</h4>
+                                <span class="skills__number">75%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p2"></div>
+                            </div>
+                            <!-- BOOTSTRAP -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">JAVASCRIPT</h4>
+                                <span class="skills__number">60%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p3"></div>
+                            </div>
+                            <!-- JAVA SCRIPT -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">GIT</h4>
+                                <span class="skills__number">65%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p4"></div>
+                            </div>
+                            <!-- SASS -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">SASS</h4>
+                                <span class="skills__number">80%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p5"></div>
+                            </div>
+                            <!-- GIT -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">BOOTSTRAP</h4>
+                                <span class="skills__number">90%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p6"></div>
+                            </div>
+                        </div>
+
+                        <!-- HABILIDADES BLANDAS -->
+                        <header class="resume__subheader">
+                            <h2 class="resume__subtitle">
+                                Habilidades blandas
+                            </h2>
+                        </header>
+                        <div class="resume__skills">
+                            <!-- TRABAJO EN EQUIPO -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">Trabajo en equipo</h4>
+                                <span class="skills__number">95%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p7"></div>
+                            </div>
+                            <!-- COMUNICACIÓN -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">Comunicación</h4>
+                                <span class="skills__number">80%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p8"></div>
+                            </div>
+                            <!-- MOTIVACIÓN -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">Motivación</h4>
+                                <span class="skills__number">90%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p9"></div>
+                            </div>
+                            <!-- APRENDIZAJE -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">Capacidad de aprendizaje</h4>
+                                <span class="skills__number">97%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p10"></div>
+                            </div>
+                            <!-- ENSEÑANZA -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">Capacidad de enseñanza</h4>
+                                <span class="skills__number">91%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p11"></div>
+                            </div>
+                            <!-- CONSTANCIA -->
+                            <article class="skills__title">
+                                <h4 class="skills__text">Constancia</h4>
+                                <span class="skills__number">96%</span>
+                            </article>
+                            <div class="skills__progressbar">
+                                <div class="skills__percent skills__percent--p12"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                </section>
+
+
+                <!-- CERTIFICADOS -->
+                <div class="resume__certificate">
+                    <header class="resume__subheader">
+                        <h2 class="resume__subtitle">
+                            Certificados
+                        </h2>
+                    </header>
+                    <section class="certificates__container">
+                        <article class="certificates__certificate">
+                            <div class="certificate__logo">
+                                <img class="certificate__img" src="../img/Coonceptos-programacion.png"
+                                    alt="Mi certificado">
+                            </div>
+                            <div class="certificate__content">
+                                <h4 class="certificate__title">Conceptos de la Programación</h4>
+                                <span class="certificate__id">Institución: Open Bootcamp</span>
+                                <span class="certificate__date">2 de abril 2023</span>
+                            </div>
+                        </article>
+                        <article class="certificates__certificate">
+                            <div class="certificate__logo">
+                                <img class="certificate__img" src="../img/Introducción-programacion.png"
+                                    alt="Mi certificado">
+                            </div>
+                            <div class="certificate__content">
+                                <h4 class="certificate__title">Introducción a la Programación</h4>
+                                <span class="certificate__id">Institución: Open Bootcamp</span>
+                                <span class="certificate__date">12 de abril 2023</span>
+                            </div>
+                        </article>
+                        <article class="certificates__certificate">
+                            <div class="certificate__logo">
+                                <img class="certificate__img" src="../img/Desarrollo-web-google-activate.png"
+                                    alt="Mi certificado">
+                            </div>
+                            <div class="certificate__content">
+                                <h4 class="certificate__title">Introducción al desarrollo web I</h4>
+                                <span class="certificate__id">Institución: Google activate</span>
+                                <span class="certificate__date">12 de junio 2023</span>
+                            </div>
+                        </article>
+                        <article class="certificates__certificate">
+                            <div class="certificate__logo">
+                                <img class="certificate__img" src="../img/HTML-CSS-FCC.png" alt="Mi certificado">
+                            </div>
+                            <div class="certificate__content">
+                                <h4 class="certificate__title">HTML 5 y CSS 3</h4>
+                                <span class="certificate__id">Intitución: freeCodeCamp</span>
+                                <span class="certificate__date">30 de marzo 2023</span>
+                            </div>
+                        </article>
+                        <article class="certificates__certificate">
+                            <div class="certificate__logo">
+                                <img class="certificate__img" src="../img/HTMLyCSS.png" alt="Mi certificado">
+                            </div>
+                            <div class="certificate__content">
+                                <h4 class="certificate__title">HTML 5 y CSS 3</h4>
+                                <span class="certificate__id">Institución: Open Bootcamp</span>
+                                <span class="certificate__date">9 de abril 2023</span>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

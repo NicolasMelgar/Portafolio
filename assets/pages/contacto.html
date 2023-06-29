@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- CARACTER Y ESCALA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- DESCRIPPCIÓN Y KEY WORDS -->
+    <meta name="description" content="Sitio de Nicolás Melgar dedicado al diseño y desarrollo web como Front End">
+    <meta name="keywwords"
+        content="FONTEND, FRONT END, DISEÑO WEB, DESARROLLO WEB, HTML, CSS, JAVASCRIPT, JAVA, SASS, BOOTSTRAP, GIT">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/img/LogoNMcuadrado.png" type="image/x-icon">
+
+    <!-- FONTAWERSOME directo asseets -->
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <!-- Hoja estilos CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+
+
+    <script src="../js/map.js" defer></script>
+    <!-- Font-family:  Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+    </style>
+
+    <!-- Mi JS para menú -->
+    <script src="../js/menu.js" defer> </script>
+
+    <!-- TITULO -->
+    <title>N/M Desarrollo Web</title>
+
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- Barra lateral (info usuario) -->
+        <aside class="layout__aside">
+
+            <section class="aside__user-info">
+
+                <!-- Información general de usuario -->
+                <div class="user-info__general">
+                    <div class="user-info__container-imagen">
+                        <img class="user-info__imagen" src="../img/LentesSF.png" alt="Nicolas Melgar desarrollador web">
+                    </div>
+
+                    <h2 class="user-info__nombre">Nicolás Melgar</h2>
+                    <h4 class="user-info__trabajo">Desarrollador Web</h4>
+                </div>
+
+                <!-- Menú de navegación -->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="../../index.html">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Inicio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="sobreMi.html">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">Sobre Mi</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="estudios.html">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Estudios</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="portafolio.html">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="blog.html">
+                                <i class="menu__icon fa-solid fa-book"></i>
+                                <span class="menu__overlay">Recursos</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="contacto.html" id="bloqueo-contacto">
+                                <i class="menu__icon fa-solid fa-envelope"></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!--  Iconos de redes sociales-->
+                <div class="user-info__links">
+                    <ul class="links__social">
+                        <li class="social_option">
+                            <a href="https://www.youtube.com/channel/UCL3P7mSnAlcI4cWkn4Hp_7Q" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-Y fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://www.linkedin.com/in/nicol%C3%A1s-melgar-6b9960270/" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-L fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://github.com/NicolasMelgar" class="social__link" target="_blank">
+                                <i class="social__icon-G fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Botón de descargar currículum-->
+                <div class="user-info__buttons">
+                    <a href="#" class="user-info__btn">Descargar CV</a>
+                </div>
+
+                <!-- Footer -->
+                <footer class="user-info__footer">
+                    &copy; 2023 Nicolás Melgar Deesarrollo Web
+
+                </footer>
+            </section>
+        </aside>
+
+        <!-- Menu responsive -->
+        <div class="layout__menu-toggle">
+            <i class="menu-toggle__icon fa-solid fa-bars"></i>
+            <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+        </div>
+        
+        <!-- Contenido principal -->
+        <main class="layout__content">
+            <section class="content__page content__contacto">
+                <!-- ESTE CONTENIDO ES LO QUE CAMBIA ENTRE LAS PÁGINAS -->
+                <header class="contacto__header">
+                    <h1 class="contacto__title">
+                        Contacto
+                    </h1>
+                </header>
+
+                <div class="contacto__container">
+                    <section class="contacto__info">
+                        <div class="contacto__data">
+                            <i class="contacto__icon fa-solid fa-location-dot"></i>
+                            <h2 class="contacto__subtitulo">
+                                El Bolsón
+                            </h2>
+                        </div>
+                        <div class="contacto__data">
+                            <i class="contacto__icon fa-solid fa-phone"></i>
+                            <h2 class="contacto__subtitulo">
+                                0054-9-2944-802755
+                            </h2>
+                        </div>
+                        <div class="contacto__data">
+                            <i class="contacto__icon fa-solid fa-envelope"></i>
+                            <h2 class="contacto__subtitulo">
+                                nicolasmelgarparadizo@gmail.com
+                            </h2>
+                        </div>
+                        <div class="contacto__data">
+                            <i class="contacto__icon fa-solid fa-circle-check"></i>
+                            <h2 class="contacto__subtitulo">
+                                Desarrollador Freelance
+                            </h2>
+                        </div>
+                    </section>
+
+                    <section class="contacto__form-box">
+                        <div class="contacto__map" id="carga-iframe-mapa">
+                            <span class="loader"></span>
+                        </div>
+                        <header class="contacto__form-header">
+                            <h3 class="contacto__title">¿Hablamos?</h3>
+                        </header>
+
+                        <form class="contacto__form" action="https://formsubmit.co/nicolasmelgarparadizo@gmail.com" method="post">
+                            <div class="form__container">
+                                <section class="form__left">
+                                    <div class="form__grupo">
+                                        <input class="form__input" type="text" name="name" required
+                                            placeholder="Introduce tu nombre">
+                                        <label class="form__label" for="name">Nombre</label>
+                                    </div>
+                                    <div class="form__grupo">
+                                        <input class="form__input" type="text" name="email" required
+                                            placeholder="Introduce tu correo">
+                                        <label class="form__label" for="email">Correo</label>
+                                    </div>
+                                    <div class="form__grupo">
+                                        <input class="form__input" type="text" name="asunto" required
+                                            placeholder="Introduce el asunto">
+                                        <label class="form__label" for="asunto">Asunto</label>
+                                    </div>
+
+                                </section>
+
+                                <section class="form__right">
+                                    <div class="form__grupo form__group-textarea">
+
+                                        <textarea class="form__input form__input-textarea" name="mensaje" id=""
+                                            cols="30" rows="10" placeholder="Escribe aquí tu mensaje"></textarea>
+                                        <label class="form__label" for="mensaje">Mensaje</label>
+                                    </div>
+
+                                </section>
+                            </div>
+                            <!-- <input class="form__btn" type="submit" value="Enviar mensaje"> -->
+                            <button type="submit" class="form__btn">Enviar</button>
+                            <input type="hidden" name="_next" value=" http://127.0.0.1:5500/">
+                            <input type="hidden" name="_captcha" value="false">
+                        </form>
+                    </section>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

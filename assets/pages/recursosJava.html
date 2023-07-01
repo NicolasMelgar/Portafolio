@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- CARACTER Y ESCALA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- DESCRIPPCIÓN Y KEY WORDS -->
+    <meta name="description" content="Sitio de Nicolás Melgar dedicado al diseño y desarrollo web como Front End">
+    <meta name="keywwords"
+        content="FONTEND, FRONT END, DISEÑO WEB, DESARROLLO WEB, HTML, CSS, JAVASCRIPT, JAVA, SASS, BOOTSTRAP, GIT">
+
+            <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Nicolas Melgar Desarrollo Web">
+    <meta itemprop="description" content="Sitio de Nicolás Melgar dedicado al diseño y desarrollo web como Front End">
+    <meta itemprop="image" content="assets\img\LentesSF.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://nicolasmelgar.github.io/Portafolio">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="N/M Desarrollo Web">
+    <meta property="og:description"
+        content="Sitio de Nicolás Melgar dedicado al diseño y desarrollo web como Front End">
+    <meta property="og:image" content="assets\img\LentesSF.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="N/M Desarrollo Web">
+    <meta name="twitter:description"
+        content="Sitio de Nicolás Melgar dedicado al diseño y desarrollo web como Front End">
+    <meta name="twitter:image" content="assets\img\LentesSF.png">
+    
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/img/LogoNMcuadrado.png" type="image/x-icon">
+
+    <!-- FONTAWERSOME directo asseets -->
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <!-- Hoja estilos CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+
+    <!-- Font-family:  Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+    </style>
+
+    <!-- Mi JS para menú -->
+    <script src="../js/menu.js" defer> </script>
+
+    <!-- TITULO -->
+    <title>N/M Desarrollo Web</title>
+
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- Barra lateral (info usuario) -->
+        <aside class="layout__aside">
+
+            <section class="aside__user-info">
+
+                <!-- Información general de usuario -->
+                <div class="user-info__general">
+                    <div class="user-info__container-imagen">
+                        <img class="user-info__imagen" src="../img/LentesSF.png" alt="Nicolas Melgar desarrollador web">
+                    </div>
+
+                    <h2 class="user-info__nombre">Nicolás Melgar</h2>
+                    <h4 class="user-info__trabajo">Desarrollador Web</h4>
+                </div>
+
+                <!-- Menú de navegación -->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="../../index.html">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Inicio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="sobreMi.html">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">Sobre Mi</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="estudios.html">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Estudios</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="portafolio.html">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="blog.html" id="bloqueo-blog">
+                                <i class="menu__icon fa-solid fa-book"></i>
+                                <span class="menu__overlay">Recursos</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__option">
+                            <a href="contacto.html">
+                                <i class="menu__icon fa-solid fa-envelope"></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!--  Iconos de redes sociales-->
+                <div class="user-info__links">
+                    <ul class="links__social">
+                        <li class="social_option">
+                            <a href="https://www.youtube.com/channel/UCL3P7mSnAlcI4cWkn4Hp_7Q" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-Y fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://www.linkedin.com/in/nicol%C3%A1s-melgar-6b9960270/" class="social__link"
+                                target="_blank">
+                                <i class="social__icon-L fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                        <li class="social_option">
+                            <a href="https://github.com/NicolasMelgar" class="social__link" target="_blank">
+                                <i class="social__icon-G fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Botón de descargar currículum-->
+                <div class="user-info__buttons">
+                    <a href="#" class="user-info__btn">Descargar CV</a>
+                </div>
+
+                <!-- Footer -->
+                <footer class="user-info__footer">
+                    &copy; 2023 Nicolás Melgar Deesarrollo Web
+
+                </footer>
+            </section>
+        </aside>
+
+        <!-- Menu responsive -->
+        <div class="layout__menu-toggle">
+            <i class="menu-toggle__icon fa-solid fa-bars"></i>
+            <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+        </div>
+        
+        <!-- Contenido principal -->
+        <main class="layout__content">
+            <section class="content__page content__blog">
+                <!-- ESTE CONTENIDO ES LO QUE CAMBIA ENTRE LAS PÁGINAS -->
+                <header class="recursosB__header">
+                    <h1 class="blog__title">
+                        Recursos JAVASCRIPT
+                    </h1>
+                </header>
+
+                <section class="blog__articulo">
+                    <!-- Artículo 1 -->
+                    <article class="recursos__articulo">
+                        <div class="articulo__box1"> 
+                            <p class="articulo__detalle">
+                            El siguiente link nos lleva a una de las páginas de Manz.dev <br>
+                            Sin dudas el trabajo que ha realizado se agradece por la claridad y la didáctica. 
+                            </p>
+                        </div>
+                        <div class="articulo__box2">
+                            <a href="https://lenguajejs.com/javascript/" class="user-info__btn artículo__btn" target="_blank">Manz.dev JAVA</a>
+                        </div>
+                    </article>
+                
+                    <!-- Artículo 2 -->
+                    <article class="recursos__articulo">
+                        <div class="articulo__box1"> 
+                            <p class="articulo__detalle">
+                                Esto es sobre HTML...pero no haremos nada si no tenemos los fundamentos correctos. <br>
+                                El siguiente link nos lleva a una de las páginas de Manz.dev <br>
+                                Sin dudas el trabajo que ha realizado se agradece por la claridad y la didáctica. 
+                            </p>
+                        </div>
+                        <div class="articulo__box2">
+                            <a href="https://lenguajehtml.com/html/" class="user-info__btn artículo__btn" target="_blank">Manz.dev HTML</a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 3 -->
+                    <article class="recursos__articulo">
+                        <div class="articulo__box1"> 
+                            <p class="articulo__detalle">
+                            Lo siguiente es una introducción a JAVASCRIPT. <br>
+                            El curso de la plataforma Udemy es gratuito. <br>
+                            Puede ser buena idea ver esta introducción y luego hacer el curso. 
+                            </p>
+                        </div>
+                        <div class="articulo__box2">
+                            <a href="https://www.youtube.com/watch?v=QWAAiskbzZo&list=PLRBma32phT7iv2bq8vQI4Hes9ZGO6YRdM&index=1" class="user-info__btn artículo__btn" target="_blank">youtube POO</a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 4 -->
+                    <article class="recursos__articulo">
+                        <div class="articulo__box1"> 
+                            <p class="articulo__detalle">
+                            El siguiente link podrás acceder a animaciones usando JS. <br>
+                            Hay trabajos que realmente me han impresionado. ¡Las posibilidades con JS parecen muy amplias! 
+                            </p>
+                        </div>
+                        <div class="articulo__box2">
+                            <a href="https://animejs.com/" class="user-info__btn artículo__btn" target="_blank">Animaciones</a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 5 -->
+                    <!-- <article class="recursos__articulo">
+                        <div class="articulo__box1"> 
+                            <p class="articulo__detalle">
+                            El siguiente link sire para verificar los link que has puesto en tu sitio. <br>
+                            En caso de no funcionar lo primero sería repararlo o vincularlo. En su defecto, puedes configurar una ventana para mostrar.
+                            </p>
+                        </div>
+                        <div class="articulo__box2">
+                            <a href="https://ahrefs.com/broken-link-checker" class="user-info__btn artículo__btn" target="_blank">Check links</a>
+                        </div>
+                    </article> -->
+                </section>
+
+
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

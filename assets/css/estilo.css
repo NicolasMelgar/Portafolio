@@ -1507,6 +1507,11 @@ y lo aplico en icon y categoría*/
   justify-content: center;
   border-bottom: 3px solid #355599;
   margin: 0 2rem;
+  margin-bottom: 3rem;
+}
+
+.recursos__articulo:last-child {
+  border-bottom: none;
 }
 
 .articulo__box1 {
@@ -1515,7 +1520,7 @@ y lo aplico en icon y categoría*/
 }
 
 .articulo__detalle {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .articulo__box2 {

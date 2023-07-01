@@ -1,0 +1,14 @@
+.terminos__general{
+    @include fila;
+    flex-wrap: wrap;
+}
+
+.terminos__sub{
+    font-size: 2rem;
+}
+
+.terminos__contenido{
+    font-size: 1.5rem;
+    margin: 2rem auto 5rem auto;
+    text-align: justify;
+}

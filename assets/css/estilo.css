@@ -348,7 +348,7 @@ h6 {
 
 .user-info__btn {
   border: 2px solid #ffffff;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 2rem;
   font-size: 1.5rem;
   color: #ffffff;
@@ -364,8 +364,12 @@ h6 {
 
 .user-info__footer {
   position: absolute;
-  bottom: 2rem;
+  bottom: 4rem;
   font-size: 1rem;
+}
+
+.user-info__politicas:hover {
+  color: rgba(44, 159, 125, 0.99);
 }
 
 /*CONTENIDO PRINCIPAL (CONTENT)*/
@@ -1553,6 +1557,22 @@ y lo aplico en icon y categoría*/
 .artículo__btn:hover {
   color: #ffffff;
   background-color: #264A99;
+}
+
+.terminos__general {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.terminos__sub {
+  font-size: 2rem;
+}
+
+.terminos__contenido {
+  font-size: 1.5rem;
+  margin: 2rem auto 5rem auto;
+  text-align: justify;
 }
 
 .layout__menu-toggle {

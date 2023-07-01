@@ -127,7 +127,7 @@
 
 .user-info__btn {
     border: 2px solid $color-principal;
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 2rem;
     font-size: 1.5rem;
     color: $color-principal;
@@ -143,8 +143,12 @@
 
 .user-info__footer {
     position: absolute;
-    bottom: 2rem;
+    bottom: 4rem;
     font-size: 1rem;
+}
+
+.user-info__politicas:hover{
+    color: $color-verde;
 }
 
 

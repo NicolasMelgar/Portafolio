@@ -5,10 +5,10 @@
     position: relative;
     min-width: 1290px;
     width: 75%;
-    height: 80vh;
+    height: 90vh;
     /*como el valor es igual la altura es fija, así que en body va 100%*/
     min-height: 80vh;
-    margin: 10vh auto;
+    margin: 5vh auto;
     /*esto centra la caja principal*/
 
     /*Luego deberé vincular las áreas*/
@@ -21,6 +21,7 @@
     box-shadow: 0 0 50px -5px rgba(0, 0, 0, .65);
 
 }
+
 
 /*BARRA LATERAL AZUL (ASIDE)*/
 
@@ -187,7 +188,7 @@
     display: block;
     position: absolute;
     top: 0;
-    right: -12.5rem;
+    right: -15rem;
     min-width: 11rem;
     border-color: $color-transparent;
 }

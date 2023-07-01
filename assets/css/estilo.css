@@ -1841,6 +1841,9 @@ y lo aplico en icon y categoría*/
     flex-basis: 100%;
     max-width: 100%;
   }
+  .terminos__contenido {
+    margin: 2rem 3rem 5rem 3rem;
+  }
 }
 /* ----   586   ----   */
 @media (max-width: 586px) {

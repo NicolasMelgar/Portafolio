@@ -3,7 +3,7 @@
 .contacto__container{
     @include fila;
     /*Ojo con esto porque lo use para que las cuatro cajaas quedarán del espacio*/
-    margin-top: -3rem;
+   // margin-top: 1rem;
 }
 
 .contacto__info{
@@ -18,6 +18,10 @@
     text-align: center;
     background-color: $color-background;
     border: 1px solid $color-grey;
+}
+
+.contacto__title{
+    font-size: 3rem;
 }
 
 .contacto__icon{

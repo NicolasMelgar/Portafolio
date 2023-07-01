@@ -24,6 +24,16 @@
     display: inline-block;
 }
 
+.about__header,
+.resume__header, 
+.portafolio__header, 
+.blog__header, 
+.contacto__header {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
 .about__title,
 .resume__title, 
 .portafolio__title, 

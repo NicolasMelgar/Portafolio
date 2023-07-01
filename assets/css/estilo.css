@@ -488,6 +488,16 @@ h6 {
   display: inline-block;
 }
 
+.about__header,
+.resume__header,
+.portafolio__header,
+.blog__header,
+.contacto__header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
 .about__title,
 .resume__title,
 .portafolio__title,
@@ -1280,7 +1290,6 @@ y lo aplico en icon y categoría*/
   display: flex;
   flex-direction: row;
   /*Ojo con esto porque lo use para que las cuatro cajaas quedarán del espacio*/
-  margin-top: -3rem;
 }
 
 .contacto__info {
@@ -1295,6 +1304,10 @@ y lo aplico en icon y categoría*/
   text-align: center;
   background-color: #f2f7f9;
   border: 1px solid #b5b6b7;
+}
+
+.contacto__title {
+  font-size: 3rem;
 }
 
 .contacto__icon {
